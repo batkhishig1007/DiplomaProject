@@ -27,13 +27,14 @@
                             required=""></textarea>
                     </div>
 
-                    <div class="u-align-left u-form-group">
+                    <!-- <div class="u-align-left u-form-group">
                         <div class="form-group">
                             <label for="name-9ec1" class="u-form-control-hidden u-label"></label>
                             <strong>Зураг оруулах:</strong>
                             <br><input type="file" name="image" class="form-control" placeholder="Enter image">
                         </div>
-                    </div>
+                    </div> -->
+
                     <br>
                     <div class="u-align-left u-form-group u-form-submit">
                         <a href="/application" class="u-btn u-btn-submit u-button-style">Оруулах<br>

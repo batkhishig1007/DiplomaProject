@@ -53,11 +53,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/admin/users"><strong>Хэрэглэгчид</strong></a>
                 </li>
-                <li>
-                </li>
-                <li>
-                </li>
-                <li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/apartments"><strong>Апартмент</strong></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('signout') }}"><strong>Гарах</strong></a>

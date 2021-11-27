@@ -11,6 +11,8 @@
     <title>Хорооны систем</title>
     <link rel="stylesheet" href="/css/nicepage.css" media="screen">
     <link rel="stylesheet" href="/css/customer.css" media="screen">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.11/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <script class="u-script" type="text/javascript" src="/js/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="/js/nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.0.3, nicepage.com">
@@ -86,13 +88,13 @@
                         </li>
                         <li class="u-nav-item">
                             <a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90"
-                                data-page-id="703620300" style="padding: 10px 36px;" href="/application">Санал,
+                                data-page-id="703620300" style="padding: 10px 36px;" href="/user_applications">Санал,
                                 гомдол</a>
 
                         </li>
                         <li class="u-nav-item"><a
                                 class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90"
-                                href="{{route('heltes')}}" style="padding: 10px 36px;">Хэлтэс</a>
+                                href="{{route('heltes')}}" style="padding: 10px 36px;">Үйлчилгээ</a>
                         </li>
 
                         <li class="u-nav-item">
@@ -138,9 +140,9 @@
                                     </div>
                                 </li>
                                 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{{route('heltes')}}"
-                                        style="padding: 10px 36px;">Хэлтэс</a>
+                                        style="padding: 10px 36px;">Үйлчилгээ</a>
                                 </li>
-                                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/application"
+                                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/user_applications"
                                         style="padding: 10px 36px;">Санал,
                                         гомдол</a>
                                 </li>
@@ -229,6 +231,8 @@
             <h2 class="u-text u-text-default u-text-8"> © 2021 ЗОХИОГЧИЙН ЭРХ ХУУЛИАР ХАМГААЛАГДСАН. САЙТЫН БҮХ ЭРХИЙГ
                 ХАН-УУЛ ДҮҮРЭГ 2-Р ХОРОО&nbsp;ЭЗЭМШИНЭ.</h2>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.11/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.11/dist/js/uikit-icons.min.js"></script>
     </footer>
 </body>
 

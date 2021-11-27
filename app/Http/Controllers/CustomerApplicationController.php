@@ -59,8 +59,10 @@ class CustomerApplicationController extends Controller
         Application::create($input);
         // Application::create($request->all());
      
-        return redirect()->route('home.applications.index')
-                        ->with('success','Санал, гомдол амжилттай үүслээ.');
+        // return redirect()->route('home.applications.index')
+        //                 ->with('success','Санал, гомдол амжилттай үүслээ.');
+        return response()
+        ->json(['success' =>true]);
     }
 
     /**

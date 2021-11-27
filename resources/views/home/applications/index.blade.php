@@ -1,21 +1,25 @@
 @extends('web.customer')
 @section('content')
-<section class="u-clearfix u-section-1" id="sec-6249">
+<section class="u-clearfix u-section-1" id="sec-6249" style="min-height: 1000px">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-form u-form-1">
-            <form action="{{ url('/home_applications') }}" method="POST" enctype="multipart/form-data"
+            <form action="{{ url('/user_applications') }}" method="POST" enctype="multipart/form-data"
                 class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form"
                 style="padding: 10px;">
                 @csrf
                 <div class="u-form-group u-form-name">
+                    <h1 class="u-text u-text-default u-text-1">Санал, гомдол<br>
+                    </h1>
+                </div>
+                <div class="u-form-group u-form-name">
                     <label for="name-9ec1" class="u-form-control-hidden u-label"></label>
-                    <input type="text" placeholder="Товч тайлбар." id="name-9ec1" name="name"
+                    <input type="text" placeholder="Товч тайлбар." id="name-9ec1" name="title"
                         class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
                 </div>
                 <div class="u-form-group u-form-message">
                     <label for="message-9ec1" class="u-form-control-hidden u-label"></label>
                     <textarea placeholder="Санал, гомдолоо бичнэ үү." rows="8" cols="50" id="message-9ec1"
-                        name="message" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white"
+                        name="description" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white"
                         required=""></textarea>
                 </div>
 

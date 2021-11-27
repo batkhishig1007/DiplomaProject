@@ -38,7 +38,6 @@ Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout')
 // customer
 Route::resource('user_applications', 'CustomerApplicationController');
 
-
 Route::get('/heltes', 'HomeController@heltes')->name('heltes');
 Route::get('/taniltsuulga', 'HomeController@taniltsuulga')->name('taniltsuulga');
 

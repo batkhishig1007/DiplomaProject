@@ -10,38 +10,33 @@
         <li data-u-target="#carousel_6f77" class="u-grey-30" data-u-slide-to="2"></li>
     </ol>
     <div class="u-carousel-inner" role="listbox">
-        <div class="u-active u-align-center u-carousel-item u-clearfix u-image u-shading u-section-1-1" img
-            src="images/medee1.jpg" data-image-width="945" data-image-height="945">
-            <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-                <h1 class="u-text u-text-black u-text-default u-title u-text-1">Мэдээ</h1>
-                <p class="u-large-text u-text u-text-black u-text-variant u-text-2"> ХАЛАМЖААС-ХӨДӨЛМӨРТ арга хэмжээ
-                    Хан-Уул дүүрэг мишээл экспо төвд урьж байна. 2021.11.24</p>
-                <a href="#" class="u-btn u-button-style u-palette-2-base u-btn-1">Цааш Унших</a>
-            </div>
-        </div>
-        <div class="skrollable skrollable-between u-align-center u-carousel-item u-clearfix u-gradient u-section-1-2">
-            <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-                <h1 class="u-text u-text-body-alt-color u-text-default u-title u-text-1">
-                    <b><b>Gradient</b></b><b><b>Fill</b></b>
+        @foreach($slides as $i=>$slide)
+        <div class="
+        @if($i==0) u-active @endif
+            u-align-center
+            u-carousel-item
+            u-clearfix
+            u-image
+            u-shading
+            u-section-1-1
+          " style="background-image:  url({{URL::to('/uploads/'.$slide->image)}}); " data-image-width="945"
+            data-image-height="945">
+            <div class="u-clearfix u-sheet u-sheet-1">
+                <h1 class="u-text u-text-black u-text-default u-title u-text-1">
+                    {{$slide->title}}
                 </h1>
-                <p class="u-large-text u-text u-text-body-alt-color u-text-variant u-text-2">Sample text. Lorem ipsum
-                    dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
-                <a href="#" class="u-btn u-btn-round u-button-style u-palette-2-base u-radius-50 u-btn-1">Цааш унших</a>
+                <a href="{{URL::to('/news/'.$slide->id)}}" class="u-btn u-button-style u-palette-2-base u-btn-1">Цааш
+                    Унших</a>
             </div>
         </div>
-        <div class="skrollable skrollable-between u-align-center u-carousel-item u-clearfix u-gradient u-section-1-3">
-            <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-                <h1 class="u-text u-text-body-alt-color u-text-default u-title u-text-1">
-                    <b><b>Gradient</b></b><b><b>Fill</b></b>
-                </h1>
-                <p class="u-large-text u-text u-text-body-alt-color u-text-variant u-text-2">Sample text. Lorem ipsum
-                    dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
-                <a href="#" class="u-btn u-btn-round u-button-style u-palette-2-base u-radius-50 u-btn-1">Цааш унших</a>
-            </div>
-        </div>
+        @endforeach
     </div>
-    <a class="u-carousel-control u-carousel-control-prev u-text-grey-30 u-block-f1b4-5" href="#carousel_6f77"
-        role="button" data-u-slide="prev">
+    <a class="
+          u-carousel-control
+          u-carousel-control-prev
+          u-text-grey-30
+          u-block-f1b4-5
+        " href="#carousel_6f77" role="button" data-u-slide="prev">
         <span aria-hidden="true">
             <svg viewBox="0 0 477.175 477.175">
                 <path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
@@ -50,8 +45,13 @@
         </span>
         <span class="sr-only">Previous</span>
     </a>
-    <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-text-grey-30 u-block-f1b4-4"
-        href="#carousel_6f77" role="button" data-u-slide="next">
+    <a class="
+          u-absolute-vcenter
+          u-carousel-control
+          u-carousel-control-next
+          u-text-grey-30
+          u-block-f1b4-4
+        " href="#carousel_6f77" role="button" data-u-slide="next">
         <span aria-hidden="true">
             <svg viewBox="0 0 477.175 477.175">
                 <path
@@ -65,7 +65,7 @@
 </section>
 <section class="u-align-center u-clearfix u-white u-section-2" id="carousel_bc4d">
     <div class="u-clearfix u-sheet u-sheet-1">
-        <h1 class="u-text u-text-black u-text-1">Сүүлийн мэдээ мэдээлэл</h1>
+        <h3 class="u-text u-text-1"><b>Сүүлийн мэдээ мэдээлэл</b></h3>
         <!--blog-->
         <!--blog_options_json-->
         <!--{"type":"Recent","source":"","tags":"","count":""}-->
@@ -73,19 +73,28 @@
         <div class="u-blog u-blog-1">
             <div class="u-repeater u-repeater-1">
                 <!--blog_post-->
-                <div class="u-align-center u-blog-post u-container-style u-repeater-item u-white u-repeater-item-1">
-                    <div class="u-container-layout u-similar-container u-container-layout-1">
+                <div class="
+                u-align-center
+                u-blog-post
+                u-container-style
+                u-repeater-item
+                u-white
+                u-repeater-item-1
+              ">
+                    <div class="
+                  u-container-layout u-similar-container u-container-layout-1
+                ">
                         <a class="u-post-header-link" href="blog/post-5.html">
                             <!--blog_post_image-->
-                            <img class="u-blog-control u-image u-image-1" src="images/ulaanbaatarr.png"
-                                data-image-width="792" data-image-height="271">
+                            <img class="u-blog-control u-image u-image-1" src="images/medee1.png" data-image-width="792"
+                                data-image-height="271" />
                             <!--/blog_post_image-->
                         </a>
                         <!--blog_post_metadata-->
                         <div class="u-blog-control u-metadata u-text-grey-30 u-metadata-1">
                             <!--blog_post_metadata_date-->
                             <span class="u-meta-date u-meta-icon">
-                                <!--blog_post_metadata_date_content-->Tue Nov 23 2021
+                                <!--blog_post_metadata_date_content-->Wed Dec 8 2021
                                 <!--/blog_post_metadata_date_content-->
                             </span>
                             <!--/blog_post_metadata_date-->
@@ -100,7 +109,7 @@
                         <!--blog_post_header-->
                         <h4 class="u-blog-control u-text u-text-2">
                             <a class="u-post-header-link" href="blog/post-5.html">
-                                <!--blog_post_header_content-->Post 6 Headline
+                                <!--blog_post_header_content-->ВАКЦИНЖУУЛАЛТЫН ЦЭГ
                                 <!--/blog_post_header_content-->
                             </a>
                         </h4>
@@ -109,19 +118,28 @@
                 </div>
                 <!--/blog_post-->
                 <!--blog_post-->
-                <div class="u-align-center u-blog-post u-container-style u-repeater-item u-white u-repeater-item-2">
-                    <div class="u-container-layout u-similar-container u-container-layout-2">
+                <div class="
+                u-align-center
+                u-blog-post
+                u-container-style
+                u-repeater-item
+                u-white
+                u-repeater-item-2
+              ">
+                    <div class="
+                  u-container-layout u-similar-container u-container-layout-2
+                ">
                         <a class="u-post-header-link" href="blog/post-4.html">
                             <!--blog_post_image-->
-                            <img class="u-blog-control u-image u-image-2" src="images/ulaanbaatar1.jpg"
-                                data-image-width="381" data-image-height="76">
+                            <img class="u-blog-control u-image u-image-2" src="images/medee2.jpg" data-image-width="381"
+                                data-image-height="76" />
                             <!--/blog_post_image-->
                         </a>
                         <!--blog_post_metadata-->
                         <div class="u-blog-control u-metadata u-text-grey-30 u-metadata-2">
                             <!--blog_post_metadata_date-->
                             <span class="u-meta-date u-meta-icon">
-                                <!--blog_post_metadata_date_content-->Tue Nov 23 2021
+                                <!--blog_post_metadata_date_content-->Wed Dec 8 2021
                                 <!--/blog_post_metadata_date_content-->
                             </span>
                             <!--/blog_post_metadata_date-->
@@ -136,7 +154,7 @@
                         <!--blog_post_header-->
                         <h4 class="u-blog-control u-text u-text-3">
                             <a class="u-post-header-link" href="blog/post-4.html">
-                                <!--blog_post_header_content-->Post 5 Headline
+                                <!--blog_post_header_content-->АЖ АХУЙН НЭГЖ, БАЙГУУЛЛАГЫН тооллого
                                 <!--/blog_post_header_content-->
                             </a>
                         </h4>
@@ -145,19 +163,28 @@
                 </div>
                 <!--/blog_post-->
                 <!--blog_post-->
-                <div class="u-align-center u-blog-post u-container-style u-repeater-item u-white u-repeater-item-3">
-                    <div class="u-container-layout u-similar-container u-container-layout-3">
+                <div class="
+                u-align-center
+                u-blog-post
+                u-container-style
+                u-repeater-item
+                u-white
+                u-repeater-item-3
+              ">
+                    <div class="
+                  u-container-layout u-similar-container u-container-layout-3
+                ">
                         <a class="u-post-header-link" href="blog/post-3.html">
                             <!--blog_post_image-->
-                            <img class="u-blog-control u-image u-image-3" src="images/khoroo.jpg" data-image-width="960"
-                                data-image-height="720">
+                            <img class="u-blog-control u-image u-image-3" src="images/medee14.png"
+                                data-image-width="960" data-image-height="720" />
                             <!--/blog_post_image-->
                         </a>
                         <!--blog_post_metadata-->
                         <div class="u-blog-control u-metadata u-text-grey-30 u-metadata-3">
                             <!--blog_post_metadata_date-->
                             <span class="u-meta-date u-meta-icon">
-                                <!--blog_post_metadata_date_content-->Tue Nov 23 2021
+                                <!--blog_post_metadata_date_content-->Wed Dec 8 2021
                                 <!--/blog_post_metadata_date_content-->
                             </span>
                             <!--/blog_post_metadata_date-->
@@ -172,7 +199,7 @@
                         <!--blog_post_header-->
                         <h4 class="u-blog-control u-text u-text-4">
                             <a class="u-post-header-link" href="blog/post-3.html">
-                                <!--blog_post_header_content-->Post 4 Headline
+                                <!--blog_post_header_content-->“Шар дарцаг” аян Хан-Уул дүүрэгт үргэлжилж байна
                                 <!--/blog_post_header_content-->
                             </a>
                         </h4>
@@ -181,19 +208,28 @@
                 </div>
                 <!--/blog_post-->
                 <!--blog_post-->
-                <div class="u-align-center u-blog-post u-container-style u-repeater-item u-white u-repeater-item-3">
-                    <div class="u-container-layout u-similar-container u-container-layout-3">
+                <div class="
+                u-align-center
+                u-blog-post
+                u-container-style
+                u-repeater-item
+                u-white
+                u-repeater-item-3
+              ">
+                    <div class="
+                  u-container-layout u-similar-container u-container-layout-3
+                ">
                         <a class="u-post-header-link" href="blog/post-2.html">
                             <!--blog_post_image-->
-                            <img class="u-blog-control u-image u-image-4" src="images/Untitled-1.jpg"
-                                data-image-width="700" data-image-height="480">
+                            <img class="u-blog-control u-image u-image-4" src="images/medee7.png" data-image-width="700"
+                                data-image-height="480" />
                             <!--/blog_post_image-->
                         </a>
                         <!--blog_post_metadata-->
                         <div class="u-blog-control u-metadata u-text-grey-30 u-metadata-3">
                             <!--blog_post_metadata_date-->
                             <span class="u-meta-date u-meta-icon">
-                                <!--blog_post_metadata_date_content-->Tue Nov 23 2021
+                                <!--blog_post_metadata_date_content-->Wed Dec 8 2021
                                 <!--/blog_post_metadata_date_content-->
                             </span>
                             <!--/blog_post_metadata_date-->
@@ -208,7 +244,7 @@
                         <!--blog_post_header-->
                         <h4 class="u-blog-control u-text u-text-4">
                             <a class="u-post-header-link" href="blog/post-2.html">
-                                <!--blog_post_header_content-->Post 3 Headline
+                                <!--blog_post_header_content-->“Өвлийн идэш” арга хэмжээ болно
                                 <!--/blog_post_header_content-->
                             </a>
                         </h4>
@@ -217,20 +253,28 @@
                 </div>
                 <!--/blog_post-->
                 <!--blog_post-->
-                <div class="u-align-center u-blog-post u-container-style u-repeater-item u-white u-repeater-item-3">
-                    <div class="u-container-layout u-similar-container u-container-layout-3">
+                <div class="
+                u-align-center
+                u-blog-post
+                u-container-style
+                u-repeater-item
+                u-white
+                u-repeater-item-3
+              ">
+                    <div class="
+                  u-container-layout u-similar-container u-container-layout-3
+                ">
                         <a class="u-post-header-link" href="blog/post-1.html">
                             <!--blog_post_image-->
-                            <img class="u-blog-control u-image u-image-5"
-                                src="images/mountains-nature-landscape_1204-297.jpg" data-image-width="626"
-                                data-image-height="417">
+                            <img class="u-blog-control u-image u-image-5" src="images/medee11.jpg"
+                                data-image-width="626" data-image-height="417" />
                             <!--/blog_post_image-->
                         </a>
                         <!--blog_post_metadata-->
                         <div class="u-blog-control u-metadata u-text-grey-30 u-metadata-3">
                             <!--blog_post_metadata_date-->
                             <span class="u-meta-date u-meta-icon">
-                                <!--blog_post_metadata_date_content-->Tue Nov 23 2021
+                                <!--blog_post_metadata_date_content-->Wed Dec 8 2021
                                 <!--/blog_post_metadata_date_content-->
                             </span>
                             <!--/blog_post_metadata_date-->
@@ -245,7 +289,8 @@
                         <!--blog_post_header-->
                         <h4 class="u-blog-control u-text u-text-4">
                             <a class="u-post-header-link" href="blog/post-1.html">
-                                <!--blog_post_header_content-->Post 2 Headline
+                                <!--blog_post_header_content-->Нийслэлийн Газар зохион байгуулалтын ерөнхий төлөвлөгөөг
+                                шинэчлэн боловсруулж байна
                                 <!--/blog_post_header_content-->
                             </a>
                         </h4>
@@ -254,19 +299,28 @@
                 </div>
                 <!--/blog_post-->
                 <!--blog_post-->
-                <div class="u-align-center u-blog-post u-container-style u-repeater-item u-white u-repeater-item-3">
-                    <div class="u-container-layout u-similar-container u-container-layout-3">
+                <div class="
+                u-align-center
+                u-blog-post
+                u-container-style
+                u-repeater-item
+                u-white
+                u-repeater-item-3
+              ">
+                    <div class="
+                  u-container-layout u-similar-container u-container-layout-3
+                ">
                         <a class="u-post-header-link" href="blog/post.html">
                             <!--blog_post_image-->
-                            <img class="u-blog-control u-image u-image-6" src="images/bayankhongor.jpg"
-                                data-image-width="400" data-image-height="266">
+                            <img class="u-blog-control u-image u-image-6" src="images/medee13.jpg"
+                                data-image-width="400" data-image-height="266" />
                             <!--/blog_post_image-->
                         </a>
                         <!--blog_post_metadata-->
                         <div class="u-blog-control u-metadata u-text-grey-30 u-metadata-3">
                             <!--blog_post_metadata_date-->
                             <span class="u-meta-date u-meta-icon">
-                                <!--blog_post_metadata_date_content-->Tue Nov 23 2021
+                                <!--blog_post_metadata_date_content-->Wed Dec 8 2021
                                 <!--/blog_post_metadata_date_content-->
                             </span>
                             <!--/blog_post_metadata_date-->
@@ -281,7 +335,7 @@
                         <!--blog_post_header-->
                         <h4 class="u-blog-control u-text u-text-4">
                             <a class="u-post-header-link" href="blog/post.html">
-                                <!--blog_post_header_content-->Post 1 Headline
+                                <!--blog_post_header_content-->Хан-Уул лиг” сагсан бөмбөгийн тэмцээн
                                 <!--/blog_post_header_content-->
                             </a>
                         </h4>
@@ -292,9 +346,20 @@
             </div>
         </div>
         <!--/blog-->
-        <p class="u-text u-text-body-alt-color u-text-default u-text-8">Images from <a
-                href="https://www.freepik.com/free-photos-vectors/background"
-                class="u-active-none u-border-1 u-border-white u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1">Freepik</a>
+        <p class="u-text u-text-body-alt-color u-text-default u-text-8">
+            Images from
+            <a href="https://www.freepik.com/free-photos-vectors/background" class="
+              u-active-none
+              u-border-1
+              u-border-white
+              u-btn
+              u-button-link
+              u-button-style
+              u-hover-none
+              u-none
+              u-text-body-alt-color
+              u-btn-1
+            ">Freepik</a>
         </p>
     </div>
 </section>
@@ -302,20 +367,34 @@
     <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-expanded-width u-list u-list-1">
             <div class="u-repeater u-repeater-1">
-                <div class="u-align-center u-container-style u-list-item u-repeater-item">
-                    <div class="u-container-layout u-similar-container u-container-layout-1">
-                        <h3 class="u-align-center u-text u-text-default u-text-1">Хэсгийн цагдаа</h3>
-                        <p class="u-text u-text-2"> Хорооны нутаг дэвсгэрт нийгмийн хэв журам сахиулах, гэмт хэргээс
-                            урьдчилан сэргийлэх, <br>тэмцэх. <br>&nbsp;Хорооны нутаг дэвсгэрт үйлдэгдсэн гэмт хэрэг,
-                            зөрчлийн судалгаанд үнэлэлт дүгнэлт <br>өгч, гэмт хэрэгтэй тэмцэх, нийгмийн хэв журам
-                            хамгаалах, урьдчилан сэргийлэх ажлыг <br>иргэд, төрийн болон төрийн бус байгууллагатай
-                            хамтран хэрэгжүүлэх.
+                <div class="
+                u-align-center u-container-style u-list-item u-repeater-item
+              ">
+                    <div class="
+                  u-container-layout u-similar-container u-container-layout-1
+                ">
+                        <h3 class="u-align-center u-text u-text-default u-text-3">
+                            Хэсгийн цагдаа
+                        </h3>
+                        <p class="u-text u-text-2">
+                            Хорооны нутаг дэвсгэрт нийгмийн хэв журам сахиулах, гэмт
+                            хэргээс урьдчилан сэргийлэх, <br />тэмцэх. <br />&nbsp;Хорооны
+                            нутаг дэвсгэрт үйлдэгдсэн гэмт хэрэг, зөрчлийн судалгаанд
+                            үнэлэлт дүгнэлт <br />өгч, гэмт хэрэгтэй тэмцэх, нийгмийн хэв
+                            журам хамгаалах, урьдчилан сэргийлэх ажлыг <br />иргэд, төрийн
+                            болон төрийн бус байгууллагатай хамтран хэрэгжүүлэх.
                         </p>
-                        <div class="u-social-icons u-spacing-10 u-social-icons-1">
-                            <a class="u-social-url" target="_blank" href="https://www.facebook.com/groups/2horoo/"><span
-                                    class="u-icon u-icon-circle u-social-facebook u-social-icon u-icon-1"><svg
-                                        class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 32 32"
-                                        style="">
+                        <div class="
+                    u-custom-item u-social-icons u-spacing-10 u-social-icons-1
+                  ">
+                            <a class="u-social-url" target="_blank" href=""><span class="
+                        u-custom-item
+                        u-icon
+                        u-icon-circle
+                        u-social-facebook
+                        u-social-icon
+                        u-icon-1
+                      "><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 32 32" style="">
                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-171c"></use>
                                     </svg><svg class="u-svg-content" viewBox="0 0 32 32" id="svg-171c">
                                         <g>
@@ -329,35 +408,38 @@
                                     </svg>
                                 </span>
                             </a>
-                            <a class="u-social-url" target="_blank" title="Phone" href=""><span
-                                    class="u-icon u-social-icon u-social-phone u-icon-2"><svg class="u-svg-link"
-                                        preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style="">
-                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-eae7"></use>
-                                    </svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-eae7">
-                                        <!-- <circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle> -->
-                                        <path fill="#FFFFFF" d="M82.7,66c-3.9,0-7.7-0.6-11.3-1.8c-1.8-0.6-4,0-5,1.1l-7.1,5.4c-8.3-4.4-13.4-9.5-17.7-17.7l5.2-7
-	c1.4-1.4,1.8-3.3,1.3-5.2c-1.2-3.6-1.8-7.5-1.8-11.3c0-2.8-2.3-5.1-5.1-5.1H29.5c-2.8,0-5.1,2.3-5.1,5.1c0,32.2,26.2,58.4,58.4,58.4
-	c2.8,0,5.1-2.3,5.1-5.1V71.1C87.8,68.3,85.6,66,82.7,66z"></path>
-                                    </svg></span>
-                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="u-align-center u-container-style u-list-item u-repeater-item">
-                    <div class="u-container-layout u-similar-container u-container-layout-2">
-                        <h3 class="u-align-center u-text u-text-default u-text-3">Өрхийн эмнэлэг</h3>
-                        <p class="u-text u-text-4"> Засаг даргын эрүүл мэндийн тухай хууль тогтоомжоор хүлээсэн чиг
-                            үүргийг гардан&nbsp;хэрэгжүүлэн ажиллах. <br>&nbsp;Иргэдийн эрүүл мэндийн урьдчилан
-                            сэргийлэх болон анхан шатны тусламж үйлчилгээг&nbsp; иргэдэд хурдан шуурхай хүргэх.<br>Эрүүл
-                            мэндийн төвийн хүртээмж үйлчилгээг өргөтгөх зорилгоор иргэдийг цахим карт, <br>хувийн эрүүл
-                            мэндийн нэгдсэн мэдээллийн сантай болгох боломжийг бүрдүүлэх.<br>
+                <div class="
+                u-align-center u-container-style u-list-item u-repeater-item
+              ">
+                    <div class="
+                  u-container-layout u-similar-container u-container-layout-2
+                ">
+                        <h3 class="u-align-center u-text u-text-default u-text-3">
+                            Өрхийн эмнэлэг
+                        </h3>
+                        <p class="u-text u-text-4">
+                            Засаг даргын эрүүл мэндийн тухай хууль тогтоомжоор хүлээсэн
+                            чиг үүргийг гардан&nbsp;хэрэгжүүлэн ажиллах.
+                            <br />&nbsp;Иргэдийн эрүүл мэндийн урьдчилан сэргийлэх болон
+                            анхан шатны тусламж үйлчилгээг&nbsp; иргэдэд хурдан шуурхай
+                            хүргэх.<br />Эрүүл мэндийн төвийн хүртээмж үйлчилгээг өргөтгөх
+                            зорилгоор иргэдийг цахим карт, <br />хувийн эрүүл мэндийн
+                            нэгдсэн мэдээллийн сантай болгох боломжийг бүрдүүлэх.<br />
                         </p>
-                        <div class="u-social-icons u-spacing-10 u-social-icons-2">
-                            <a class="u-social-url" target="_blank"
-                                href="https://www.facebook.com/profile.php?id=100008981198386"><span
-                                    class="u-icon u-icon-circle u-social-facebook u-social-icon u-icon-3"><svg
-                                        class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 32 32"
-                                        style="">
+                        <div class="
+                    u-custom-item u-social-icons u-spacing-10 u-social-icons-2
+                  ">
+                            <a class="u-social-url" target="_blank" href=""><span class="
+                        u-custom-item
+                        u-icon
+                        u-icon-circle
+                        u-social-facebook
+                        u-social-icon
+                        u-icon-2
+                      "><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 32 32" style="">
                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-bb56"></use>
                                     </svg><svg class="u-svg-content" viewBox="0 0 32 32" id="svg-bb56">
                                         <g>
@@ -369,40 +451,41 @@
                                                 fill="#FFFFFF" id="f"></path>
                                         </g>
                                     </svg>
-
-
                                 </span>
-                            </a>
-                            <a class="u-social-url" target="_blank" title="Phone" href="+97670117485"><span
-                                    class="u-icon u-social-icon u-social-phone u-icon-4"><svg class="u-svg-link"
-                                        preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style="">
-                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-eae7"></use>
-                                    </svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-eae7">
-                                        <circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle>
-                                        <path fill="#FFFFFF" d="M82.7,66c-3.9,0-7.7-0.6-11.3-1.8c-1.8-0.6-4,0-5,1.1l-7.1,5.4c-8.3-4.4-13.4-9.5-17.7-17.7l5.2-7
-	c1.4-1.4,1.8-3.3,1.3-5.2c-1.2-3.6-1.8-7.5-1.8-11.3c0-2.8-2.3-5.1-5.1-5.1H29.5c-2.8,0-5.1,2.3-5.1,5.1c0,32.2,26.2,58.4,58.4,58.4
-	c2.8,0,5.1-2.3,5.1-5.1V71.1C87.8,68.3,85.6,66,82.7,66z"></path>
-                                    </svg></span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="u-align-center u-container-style u-list-item u-repeater-item">
-                    <div class="u-container-layout u-similar-container u-container-layout-3">
-                        <h3 class="u-align-center u-text u-text-default u-text-5">Иргэдийн хурлын танхим</h3>
-                        <p class="u-text u-text-6"> Хорооны иргэдийн нийтийн хурлын бэлтгэл ажлыг хангах, хуралдааныг
-                            зохион байгуулах. <br>&nbsp;Иргэний танхимаас зохион байгуулаж буй аливаа үйл ажиллагааг
-                            зохион байгуулах. <br>Иргэний танхимаас зохион байгуулж буй хэлэлцүүлэг, сургалт, олон
-                            нийтийн арга <br>хэмжээний талаарх тайлан мэдээг гаргаж иргэний танхимд хүргэх.<br> гаргаж
-                            иргэний
+                <div class="
+                u-align-center u-container-style u-list-item u-repeater-item
+              ">
+                    <div class="
+                  u-container-layout u-similar-container u-container-layout-3
+                ">
+                        <h3 class="u-align-center u-text u-text-default u-text-5">
+                            Иргэдийн хурлын танхим
+                        </h3>
+                        <p class="u-text u-text-6">
+                            Хорооны иргэдийн нийтийн хурлын бэлтгэл ажлыг хангах,
+                            хуралдааныг зохион байгуулах. <br />&nbsp;Иргэний танхимаас
+                            зохион байгуулаж буй аливаа үйл ажиллагааг зохион байгуулах.
+                            <br />Иргэний танхимаас зохион байгуулж буй хэлэлцүүлэг,
+                            сургалт, олон нийтийн арга <br />хэмжээний талаарх тайлан
+                            мэдээг гаргаж иргэний танхимд хүргэх.
                         </p>
-                        <div class="u-social-icons u-spacing-10 u-social-icons-3">
+                        <div class="
+                    u-custom-item u-social-icons u-spacing-10 u-social-icons-3
+                  ">
                             <a class="u-social-url" target="_blank"
                                 href="https://www.facebook.com/profile.php?id=100064750566804"
-                                title="Хан-Уул дүүргийн 2-р Хороо"><span
-                                    class="u-icon u-icon-circle u-social-facebook u-social-icon u-icon-5"><svg
-                                        class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 32 32"
-                                        style="">
+                                title="Хан-Уул дүүргийн 2-р Хороо"><span class="
+                        u-custom-item
+                        u-icon
+                        u-icon-circle
+                        u-social-facebook
+                        u-social-icon
+                        u-icon-3
+                      "><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 32 32" style="">
                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-d581"></use>
                                     </svg><svg class="u-svg-content" viewBox="0 0 32 32" id="svg-d581">
                                         <g>
@@ -414,20 +497,7 @@
                                                 fill="#FFFFFF" id="f"></path>
                                         </g>
                                     </svg>
-
-
                                 </span>
-                            </a>
-                            <a class="u-social-url" target="_blank" title="Phone" href=""><span
-                                    class="u-icon u-social-icon u-social-phone u-icon-6"><svg class="u-svg-link"
-                                        preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style="">
-                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-eae7"></use>
-                                    </svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-eae7">
-                                        <circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle>
-                                        <path fill="#FFFFFF" d="M82.7,66c-3.9,0-7.7-0.6-11.3-1.8c-1.8-0.6-4,0-5,1.1l-7.1,5.4c-8.3-4.4-13.4-9.5-17.7-17.7l5.2-7
-	c1.4-1.4,1.8-3.3,1.3-5.2c-1.2-3.6-1.8-7.5-1.8-11.3c0-2.8-2.3-5.1-5.1-5.1H29.5c-2.8,0-5.1,2.3-5.1,5.1c0,32.2,26.2,58.4,58.4,58.4
-	c2.8,0,5.1-2.3,5.1-5.1V71.1C87.8,68.3,85.6,66,82.7,66z"></path>
-                                    </svg></span>
                             </a>
                         </div>
                     </div>
@@ -438,13 +508,27 @@
 </section>
 <section class="u-align-center u-clearfix u-section-4" id="sec-1cbe">
     <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-text u-text-default u-text-1">Хэсгийн ахлагчид</h2>
-        <div class="u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
+        <h3 class="u-text u-text-default u-text-1"><b>Хэсгийн ахлагчид</b></h3>
+        <div class="
+            u-expanded-width-lg
+            u-expanded-width-md
+            u-expanded-width-sm
+            u-expanded-width-xs
+            u-list
+            u-list-1
+          ">
             <div class="u-repeater u-repeater-1">
                 <div class="u-container-style u-list-item u-repeater-item">
-                    <div class="u-container-layout u-similar-container u-container-layout-1"><span
-                            class="u-icon u-icon-rounded u-palette-4-light-3 u-spacing-10 u-icon-1"><svg
-                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
+                    <div class="
+                  u-container-layout u-similar-container u-container-layout-1
+                ">
+                        <span class="
+                    u-icon
+                    u-icon-rounded
+                    u-palette-4-light-3
+                    u-spacing-10
+                    u-icon-1
+                  "><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-669b"></use>
                             </svg><svg class="u-svg-content" viewBox="0 0 91 91" id="svg-669b">
                                 <g>
@@ -476,22 +560,28 @@
                                     </g>
                                 </g>
                             </svg>
-
-
                         </span>
                         <div class="u-container-style u-group u-group-1">
                             <div class="u-container-layout u-container-layout-2">
                                 <h5 class="u-align-center u-text u-text-2">Д.Бат</h5>
-                                <p class="u-align-center u-text u-text-3">1-р хэсэг буюу 1-3-р байрны хэсгийн ахлагч
-                                    Д.Бат 99288225</p>
+                                <p class="u-align-center u-text u-text-3">
+                                    1-р хэсэг буюу 1-3-р байрны хэсгийн ахлагч Д.Бат 99288225
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="u-container-style u-list-item u-repeater-item">
-                    <div class="u-container-layout u-similar-container u-container-layout-3"><span
-                            class="u-icon u-icon-rounded u-palette-4-light-3 u-spacing-10 u-icon-2"><svg
-                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
+                    <div class="
+                  u-container-layout u-similar-container u-container-layout-3
+                ">
+                        <span class="
+                    u-icon
+                    u-icon-rounded
+                    u-palette-4-light-3
+                    u-spacing-10
+                    u-icon-2
+                  "><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-0f70"></use>
                             </svg><svg class="u-svg-content" viewBox="0 0 91 91" id="svg-0f70">
                                 <g>
@@ -523,22 +613,28 @@
                                     </g>
                                 </g>
                             </svg>
-
-
                         </span>
                         <div class="u-container-style u-group u-video-cover u-group-2">
                             <div class="u-container-layout u-container-layout-4">
                                 <h5 class="u-align-center u-text u-text-4">Д.Дорж</h5>
-                                <p class="u-align-center u-text u-text-5">2-р хэсэг буюу 4-6-р байрны хэсгийн ахлагч
-                                    Д.Дорж 98288225</p>
+                                <p class="u-align-center u-text u-text-5">
+                                    2-р хэсэг буюу 4-6-р байрны хэсгийн ахлагч Д.Дорж 98288225
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="u-container-style u-list-item u-repeater-item">
-                    <div class="u-container-layout u-similar-container u-container-layout-5"><span
-                            class="u-icon u-icon-rounded u-palette-4-light-3 u-spacing-10 u-icon-3"><svg
-                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
+                    <div class="
+                  u-container-layout u-similar-container u-container-layout-5
+                ">
+                        <span class="
+                    u-icon
+                    u-icon-rounded
+                    u-palette-4-light-3
+                    u-spacing-10
+                    u-icon-3
+                  "><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-3da0"></use>
                             </svg><svg class="u-svg-content" viewBox="0 0 91 91" id="svg-3da0">
                                 <g>
@@ -570,22 +666,29 @@
                                     </g>
                                 </g>
                             </svg>
-
-
                         </span>
                         <div class="u-container-style u-group u-video-cover u-group-3">
                             <div class="u-container-layout u-container-layout-6">
                                 <h5 class="u-align-center u-text u-text-6">Д.Цэцэг</h5>
-                                <p class="u-align-center u-text u-text-7">3-р хэсэг буюу 7-9-р байрны хэсгийн ахлагч
-                                    Д.Цэцэг 97288225</p>
+                                <p class="u-align-center u-text u-text-7">
+                                    3-р хэсэг буюу 7-9-р байрны хэсгийн ахлагч Д.Цэцэг
+                                    97288225
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="u-container-style u-list-item u-repeater-item">
-                    <div class="u-container-layout u-similar-container u-container-layout-7"><span
-                            class="u-icon u-icon-rounded u-palette-4-light-3 u-spacing-10 u-icon-4"><svg
-                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
+                    <div class="
+                  u-container-layout u-similar-container u-container-layout-7
+                ">
+                        <span class="
+                    u-icon
+                    u-icon-rounded
+                    u-palette-4-light-3
+                    u-spacing-10
+                    u-icon-4
+                  "><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-6568"></use>
                             </svg><svg class="u-svg-content" viewBox="0 0 91 91" id="svg-6568">
                                 <g>
@@ -617,22 +720,29 @@
                                     </g>
                                 </g>
                             </svg>
-
-
                         </span>
                         <div class="u-container-style u-group u-video-cover u-group-4">
                             <div class="u-container-layout u-container-layout-8">
                                 <h5 class="u-align-center u-text u-text-8">Д.Навч</h5>
-                                <p class="u-align-center u-text u-text-9">4-р хэсэг буюу 10-12-р байрны хэсгийн ахлагч
-                                    Д.Навч 96288225</p>
+                                <p class="u-align-center u-text u-text-9">
+                                    4-р хэсэг буюу 10-12-р байрны хэсгийн ахлагч Д.Навч
+                                    96288225
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="u-container-style u-list-item u-repeater-item">
-                    <div class="u-container-layout u-similar-container u-container-layout-9"><span
-                            class="u-icon u-icon-rounded u-palette-4-light-3 u-spacing-10 u-icon-5"><svg
-                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
+                    <div class="
+                  u-container-layout u-similar-container u-container-layout-9
+                ">
+                        <span class="
+                    u-icon
+                    u-icon-rounded
+                    u-palette-4-light-3
+                    u-spacing-10
+                    u-icon-5
+                  "><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-6568"></use>
                             </svg><svg class="u-svg-content" viewBox="0 0 91 91" id="svg-6568">
                                 <g>
@@ -664,22 +774,29 @@
                                     </g>
                                 </g>
                             </svg>
-
-
                         </span>
                         <div class="u-container-style u-group u-video-cover u-group-5">
                             <div class="u-container-layout u-container-layout-10">
                                 <h5 class="u-align-center u-text u-text-10">Д.Дулам</h5>
-                                <p class="u-align-center u-text u-text-11">5-р хэсэг буюу 13-15-р байрны хэсгийн ахлагч
-                                    Д.Дулам 95288225</p>
+                                <p class="u-align-center u-text u-text-11">
+                                    5-р хэсэг буюу 13-15-р байрны хэсгийн ахлагч Д.Дулам
+                                    95288225
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="u-container-style u-list-item u-repeater-item">
-                    <div class="u-container-layout u-similar-container u-container-layout-11"><span
-                            class="u-icon u-icon-rounded u-palette-4-light-3 u-spacing-10 u-icon-6"><svg
-                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
+                    <div class="
+                  u-container-layout u-similar-container u-container-layout-11
+                ">
+                        <span class="
+                    u-icon
+                    u-icon-rounded
+                    u-palette-4-light-3
+                    u-spacing-10
+                    u-icon-6
+                  "><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-6568"></use>
                             </svg><svg class="u-svg-content" viewBox="0 0 91 91" id="svg-6568">
                                 <g>
@@ -711,22 +828,29 @@
                                     </g>
                                 </g>
                             </svg>
-
-
                         </span>
                         <div class="u-container-style u-group u-video-cover u-group-6">
                             <div class="u-container-layout u-container-layout-12">
                                 <h5 class="u-align-center u-text u-text-12">Д.Нар</h5>
-                                <p class="u-align-center u-text u-text-13">6-р хэсэг буюу 16-18-р байрны хэсгийн ахлагч
-                                    Д.Нар 94288225</p>
+                                <p class="u-align-center u-text u-text-13">
+                                    6-р хэсэг буюу 16-18-р байрны хэсгийн ахлагч Д.Нар
+                                    94288225
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="u-container-style u-list-item u-repeater-item">
-                    <div class="u-container-layout u-similar-container u-container-layout-13"><span
-                            class="u-icon u-icon-rounded u-palette-4-light-3 u-spacing-10 u-icon-7"><svg
-                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
+                    <div class="
+                  u-container-layout u-similar-container u-container-layout-13
+                ">
+                        <span class="
+                    u-icon
+                    u-icon-rounded
+                    u-palette-4-light-3
+                    u-spacing-10
+                    u-icon-7
+                  "><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-6568"></use>
                             </svg><svg class="u-svg-content" viewBox="0 0 91 91" id="svg-6568">
                                 <g>
@@ -758,22 +882,29 @@
                                     </g>
                                 </g>
                             </svg>
-
-
                         </span>
                         <div class="u-container-style u-group u-video-cover u-group-7">
                             <div class="u-container-layout u-container-layout-14">
                                 <h5 class="u-align-center u-text u-text-14">Д.Сар</h5>
-                                <p class="u-align-center u-text u-text-15">7-р хэсэг буюу 19-21-р байрны хэсгийн ахлагч
-                                    Д.Сар 93288225</p>
+                                <p class="u-align-center u-text u-text-15">
+                                    7-р хэсэг буюу 19-21-р байрны хэсгийн ахлагч Д.Сар
+                                    93288225
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="u-container-style u-list-item u-repeater-item">
-                    <div class="u-container-layout u-similar-container u-container-layout-15"><span
-                            class="u-icon u-icon-rounded u-palette-4-light-3 u-spacing-10 u-icon-8"><svg
-                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
+                    <div class="
+                  u-container-layout u-similar-container u-container-layout-15
+                ">
+                        <span class="
+                    u-icon
+                    u-icon-rounded
+                    u-palette-4-light-3
+                    u-spacing-10
+                    u-icon-8
+                  "><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-6568"></use>
                             </svg><svg class="u-svg-content" viewBox="0 0 91 91" id="svg-6568">
                                 <g>
@@ -805,22 +936,29 @@
                                     </g>
                                 </g>
                             </svg>
-
-
                         </span>
                         <div class="u-container-style u-group u-video-cover u-group-8">
                             <div class="u-container-layout u-container-layout-16">
                                 <h5 class="u-align-center u-text u-text-16">Д.Жимс</h5>
-                                <p class="u-align-center u-text u-text-17">8-р хэсэг буюу 22-24-р байрны хэсгийн ахлагч
-                                    Д.Жимс 92288225</p>
+                                <p class="u-align-center u-text u-text-17">
+                                    8-р хэсэг буюу 22-24-р байрны хэсгийн ахлагч Д.Жимс
+                                    92288225
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="u-container-style u-list-item u-repeater-item">
-                    <div class="u-container-layout u-similar-container u-container-layout-17"><span
-                            class="u-icon u-icon-rounded u-palette-4-light-3 u-spacing-10 u-icon-9"><svg
-                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
+                    <div class="
+                  u-container-layout u-similar-container u-container-layout-17
+                ">
+                        <span class="
+                    u-icon
+                    u-icon-rounded
+                    u-palette-4-light-3
+                    u-spacing-10
+                    u-icon-9
+                  "><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-6568"></use>
                             </svg><svg class="u-svg-content" viewBox="0 0 91 91" id="svg-6568">
                                 <g>
@@ -852,22 +990,29 @@
                                     </g>
                                 </g>
                             </svg>
-
-
                         </span>
                         <div class="u-container-style u-group u-video-cover u-group-9">
                             <div class="u-container-layout u-container-layout-18">
                                 <h5 class="u-align-center u-text u-text-18">Д.Тулга</h5>
-                                <p class="u-align-center u-text u-text-19">9-р хэсэг буюу 25-27-р байрны хэсгийн ахлагч
-                                    Д.Тулга 91288225</p>
+                                <p class="u-align-center u-text u-text-19">
+                                    9-р хэсэг буюу 25-27-р байрны хэсгийн ахлагч Д.Тулга
+                                    91288225
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="u-container-style u-list-item u-repeater-item">
-                    <div class="u-container-layout u-similar-container u-container-layout-19"><span
-                            class="u-icon u-icon-rounded u-palette-4-light-3 u-spacing-10 u-icon-10"><svg
-                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
+                    <div class="
+                  u-container-layout u-similar-container u-container-layout-19
+                ">
+                        <span class="
+                    u-icon
+                    u-icon-rounded
+                    u-palette-4-light-3
+                    u-spacing-10
+                    u-icon-10
+                  "><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-6568"></use>
                             </svg><svg class="u-svg-content" viewBox="0 0 91 91" id="svg-6568">
                                 <g>
@@ -899,22 +1044,29 @@
                                     </g>
                                 </g>
                             </svg>
-
-
                         </span>
                         <div class="u-container-style u-group u-video-cover u-group-10">
                             <div class="u-container-layout u-container-layout-20">
                                 <h5 class="u-align-center u-text u-text-20">Д.Сүрэн</h5>
-                                <p class="u-align-center u-text u-text-21">10-р хэсэг буюу 28-30-р байрны хэсгийн ахлагч
-                                    Д.Сүрэн 90288225</p>
+                                <p class="u-align-center u-text u-text-21">
+                                    10-р хэсэг буюу 28-30-р байрны хэсгийн ахлагч Д.Сүрэн
+                                    90288225
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="u-container-style u-list-item u-repeater-item">
-                    <div class="u-container-layout u-similar-container u-container-layout-21"><span
-                            class="u-icon u-icon-rounded u-palette-4-light-3 u-spacing-10 u-icon-11"><svg
-                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
+                    <div class="
+                  u-container-layout u-similar-container u-container-layout-21
+                ">
+                        <span class="
+                    u-icon
+                    u-icon-rounded
+                    u-palette-4-light-3
+                    u-spacing-10
+                    u-icon-11
+                  "><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-6568"></use>
                             </svg><svg class="u-svg-content" viewBox="0 0 91 91" id="svg-6568">
                                 <g>
@@ -946,22 +1098,29 @@
                                     </g>
                                 </g>
                             </svg>
-
-
                         </span>
                         <div class="u-container-style u-group u-video-cover u-group-11">
                             <div class="u-container-layout u-container-layout-22">
                                 <h5 class="u-align-center u-text u-text-22">Д.Сүх</h5>
-                                <p class="u-align-center u-text u-text-23">11-р хэсэг буюу 31-33-р байрны хэсгийн ахлагч
-                                    Д.Сүх 89288225</p>
+                                <p class="u-align-center u-text u-text-23">
+                                    11-р хэсэг буюу 31-33-р байрны хэсгийн ахлагч Д.Сүх
+                                    89288225
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="u-container-style u-list-item u-repeater-item">
-                    <div class="u-container-layout u-similar-container u-container-layout-23"><span
-                            class="u-icon u-icon-rounded u-palette-4-light-3 u-spacing-10 u-icon-12"><svg
-                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
+                    <div class="
+                  u-container-layout u-similar-container u-container-layout-23
+                ">
+                        <span class="
+                    u-icon
+                    u-icon-rounded
+                    u-palette-4-light-3
+                    u-spacing-10
+                    u-icon-12
+                  "><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 91 91" style="">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-6568"></use>
                             </svg><svg class="u-svg-content" viewBox="0 0 91 91" id="svg-6568">
                                 <g>
@@ -993,14 +1152,14 @@
                                     </g>
                                 </g>
                             </svg>
-
-
                         </span>
                         <div class="u-container-style u-group u-video-cover u-group-12">
                             <div class="u-container-layout u-container-layout-24">
                                 <h5 class="u-align-center u-text u-text-24">Д.Нэргүй</h5>
-                                <p class="u-align-center u-text u-text-25">12-р хэсэг буюу 34-36-р байрны хэсгийн ахлагч
-                                    Д.Нэргүй 89288225</p>
+                                <p class="u-align-center u-text u-text-25">
+                                    12-р хэсэг буюу 34-36-р байрны хэсгийн ахлагч Д.Нэргүй
+                                    89288225
+                                </p>
                             </div>
                         </div>
                     </div>

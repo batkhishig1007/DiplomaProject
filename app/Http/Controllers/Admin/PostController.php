@@ -17,7 +17,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $data = Post::with('category')->paginate(25);
+        $data = Post::with('category')->orderBy('id', 'desc')->paginate(25);
     
         return view('admin.posts.index',compact('data'))->with('i', (request()->input('page', 1) - 1) * 25);
     }

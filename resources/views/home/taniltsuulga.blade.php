@@ -5,18 +5,24 @@
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-container-style u-group u-group-1">
             <div class="u-container-layout u-valign-middle u-container-layout-1 u-text u-text-default u-text-1">
-                <h1 style="text-align: center;"><strong>About Us<strong></h1>
-                <p class="u-text u-text-2">Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-                    id suscipit ex. Suspendisse rhoncus laoreet purus quis elementum. Phasellus sed efficitur dolor, et
-                    ultricies sapien. Quisque fringilla sit amet dolor commodo efficitur. Aliquam et sem odio. In
-                    ullamcorper nisi nunc, et molestie ipsum iaculis sit amet.</p>
-                <!-- <a href=""
-                    class="u-active-none u-border-2 u-border-palette-1-base u-btn u-btn-rectangle u-button-style u-hover-none u-none u-btn-1">Hyperlink</a> -->
+                <h1 style="text-align: center;"><strong>Бидний тухай<strong></h1>
+                <p class="u-text u-text-1">Хан-Уул дүүргийн 2-р хороо нь 12,990 оршин суугчид, 2,865 өрхтэй, 225 га
+                    газар нутагтай
+                    бөгөөд нийт нутгийг байшин барилга, зам талбай эзэлдэг. Зүүн талаараа Хан-Уул дүүргийн
+                    1-р хороотой, урд талаараа Хан-Уул дүүргийн 15-р хороотой, баруун талаараа Хан-Уул дүүргийн
+                    3-р хороотой хиллэдэг. Байшин хороолол эзэлсэн, үйлдвэр аж ахуйн нэгж байгууллага төвлөрсөн
+                    хороо юм.</p>
+                <!-- <p class="u-text u-text-1"> Улаанбаатар хотын 15, 18, 52, 75 -р дунд сургуулиуд, 65, 67, 72
+                    цэцэрлэгүүдТөмөр замын дээд сургуул, төмөр замын дуурь бүжгийн чуулга, Нийслэлийн мал эмнэлгийн
+                    газар, Хүмүүн, Энх-Ундарга эмнэлэг, Технийкийн дээд сургууль, , Гранд плаза, ТБДандууд, Жим палас,
+                    Старс зэрэг томоохон худалдааны төвүүд үйл ажиллагаагаа явуулж байна. Хүнс, барааны нэрийн дэлгүүр,
+                    мухлаг бар ресторан нийт 200 гаруй аж ахуй нэгж, байгууллага үйл ажиллагаагаа явуулж байна.</p> -->
+                <img src="images/taniltsuulga.jpg" data-image-width="256" data-image-height="256">
             </div>
         </div>
     </div>
 </section>
-<section class="u-clearfix u-section-2" id="sec-3e47">
+<!-- <section class="u-clearfix u-section-2" id="sec-3e47">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-spacing-vertical u-layout-wrap u-layout-wrap-1">
             <div class="u-layout">
@@ -32,25 +38,26 @@
                         </div>
                     </div>
                     <div class="u-container-style u-image u-layout-cell u-right-cell u-size-20 u-image-1">
-                        <img src="images/1.svg" data-image-width="256" data-image-height="256">
+                        <img src="images/zasagdarga.jpg" data-image-width="400" data-image-height="400">
                         <div class="u-container-layout u-container-layout-2"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <section class="u-clearfix u-section-3" id="sec-7d6c">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="fr-view u-align-center u-clearfix u-rich-text u-text u-text-1" style="min-height: 1000px;">
-            <h1 style="text-align: center;">Sample Headline</h1>
+            <h1 style="text-align: center;">Засаг дарга</h1>
             <p style="text-align: center;">
                 <span style="line-height: 2.0;">Sample text. Click to select the text box. Click again or double click
                     to start editing the text. Dictum non consectetur a erat nam at. Aliquam malesuada bibendum arcu
                     vitae elementum curabitur vitae. Tellus mauris a diam maecenas sed enim ut sem. Ipsum faucibus vitae
                     aliquet nec ullamcorper sit amet risus nullam. Pretium nibh ipsum consequat nisl vel pretium. In eu
-                    mi bibendum neque eges<img src="images/1.svg" width="570" align="center" style="width: 583px;"
-                        class="fr-dib fr-fic">tas congue. Vitae ultricies leo integer malesuada nunc. Nibh praesent
+                    mi bibendum neque eges<img src="images/zasagdarga.jpg" width="570" align="center"
+                        style="width: 583px;" class="fr-dib fr-fic">tas congue. Vitae ultricies leo integer malesuada
+                    nunc. Nibh praesent
                     tristique magna sit amet purus gravida. Diam volutpat commodo sed egestas. Gravida dictum fusce ut
                     placerat orci nulla pellentesque. Ornare massa eget egestas purus viverra. Morbi enim nunc faucibus
                     a pellentesque sit amet porttitor. Mattis pellentesque id nibh tortor id aliquet lectus proin nibh.

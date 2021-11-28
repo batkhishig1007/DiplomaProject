@@ -71,13 +71,6 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Санал, хүсэлтийн ID:</strong>
-                <input type="number" name="application_id" value="{{ $post->application_id }}" class="form-control"
-                    placeholder="Application_id">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
                 <strong>Категорийн ID:</strong>
                 <input type="number" name="category_id" value="{{ $post->category_id }}" class="form-control"
                     placeholder="Category_id">

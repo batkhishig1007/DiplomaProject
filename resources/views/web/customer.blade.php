@@ -255,7 +255,7 @@
                                 </a>
                             </p>
                             <p class="u-text u-text-3">
-                                Имайл: khanuul.2khoroo@yahoo.com
+                                Имайл: hud_2khoroo@khanuul.mn
                             </p>
                             <a href="https://nicepage.com/static-site-generator" class="
                     u-active-none
@@ -284,7 +284,7 @@
                 ">
                             <p class="u-text u-text-default u-text-6">Хандалтын тоо</p>
                             <p class="u-text u-text-7">
-                                Нийт:&nbsp;<br />Сар:<br />7 хоног:<br />Өнөөдөр:
+                                Нийт:&nbsp;576<br />Сар:104<br />7 хоног:49<br />Өнөөдөр:16
                             </p>
                             <a href="https://nicepage.com/static-site-generator" class="
                     u-active-none

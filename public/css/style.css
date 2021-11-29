@@ -564,7 +564,7 @@ header img {
 }
 
 .uk-tab > .uk-active > a {
-    color: #ff741a;
+    color: #36d1dc !important;
 }
 
 .uk-table td {
@@ -816,7 +816,7 @@ div.pagination span.page_disabled {
 }
 
 .uk-open > a.servicetitle {
-    color: #ff741a;
+    color: #36d1dc !important;
 }
 
 .services {

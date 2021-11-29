@@ -9192,7 +9192,11 @@ section.u-image,
 .u-container-layout {
     position: relative;
     flex: 1;
-    max-width: 100%;
+    max-width: 90% !important;
+    max-width: 90% !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    min-height: 30px !important;
 }
 .u-inner-container-layout,
 .u-container-layout > * {
@@ -37446,7 +37450,7 @@ a.u-link.u-text-hover-custom-color-7:hover {
 /** common-rules **/
 h1.u-title {
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 4.5rem;
     line-height: 1.1;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -37905,10 +37909,14 @@ blockquote {
     min-height: 102px;
 }
 
+.u-header .u-sheet-1 {
+    min-height: 102px;
+}
+
 .u-header .u-image-1 {
-    width: calc(((100% - 1140px) / 2) + 3px);
+    width: 83px;
     height: 79px;
-    margin: 11px auto 0 0;
+    margin: 11px auto 0 22px;
 }
 
 .u-header .u-logo-image-1 {
@@ -37918,23 +37926,23 @@ blockquote {
 
 .u-header .u-image-2 {
     width: 610px;
-    left: auto;
-    right: 0;
+    left: 530px;
+    right: 80px;
 }
 
 .u-header .u-text-1 {
-    margin: -54px auto 37px calc(((100% - 1140px) / 2) + 13px);
+    margin: -54px auto 37px 127px;
 }
 .u-header .u-section-row-2 {
     background-image: linear-gradient(to right, #36d1dc, #6dd5ed);
 }
 
-.u-header .u-sheet-1 {
-    min-height: 50px;
+.u-header .u-sheet-2 {
+    min-height: 59px;
 }
 
 .u-header .u-menu-1 {
-    margin: 6px -14px 6px auto;
+    margin: 15px -14px 6px auto;
 }
 
 .u-header .u-nav-1 {
@@ -37950,16 +37958,17 @@ blockquote {
 @media (max-width: 1199px) {
     .u-header .u-image-1 {
         width: 83px;
-        margin-left: calc(((100% - 1140px) / 2) + 200px);
+        margin-left: 100px;
     }
 
     .u-header .u-image-2 {
         width: 570px;
-        left: 390px;
+        left: 340px;
     }
 
     .u-header .u-text-1 {
-        margin-left: calc(((100% - 1140px) / 2) + 227px);
+        margin-top: -54px;
+        margin-left: 127px;
     }
 }
 @media (max-width: 1199px) {
@@ -37969,45 +37978,36 @@ blockquote {
 }
 @media (max-width: 991px) {
     .u-header .u-image-1 {
-        margin-left: calc(((100% - 1140px) / 2) + 420px);
+        margin-left: 210px;
     }
 
     .u-header .u-image-2 {
-        left: 170px;
-    }
-
-    .u-header .u-text-1 {
-        margin-left: calc(((100% - 1140px) / 2) + 337px);
+        left: 120px;
     }
 }
 
 @media (max-width: 767px) {
     .u-header .u-image-1 {
-        margin-right: calc(((100% - 1140px) / 2) + 458px);
-        margin-left: auto;
+        margin-left: 300px;
     }
 
     .u-header .u-image-2 {
-        left: -10px;
-    }
-
-    .u-header .u-text-1 {
-        margin-left: calc(((100% - 1140px) / 2) + 427px);
+        left: -60px;
     }
 }
 
 @media (max-width: 575px) {
     .u-header .u-image-1 {
-        margin-right: calc(((100% - 1140px) / 2) + 258px);
+        margin-left: 400px;
     }
 
     .u-header .u-image-2 {
         width: 340px;
-        left: 20px;
+        left: -30px;
     }
 
     .u-header .u-text-1 {
-        margin-left: calc(((100% - 1140px) / 2) + 480px);
+        margin-left: 80px;
     }
 }
 

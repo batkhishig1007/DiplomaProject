@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'id', 'username', 'password', 'firstname', 'lastname', 'rd', 'email', 'phone', 'birthday', 'gender', 'user_type', 'city_id', 'district_id', 'ward_id', 'address', 'is_active', 'last_logined', 'created_at', 'updated_at', 'deleted_at', 
+        'id', 'username', 'password', 'firstname', 'lastname', 'rd', 'email', 'phone', 'birthday', 'gender', 'admin_type', 'apartment_id', 'address', 'is_active', 'last_logined', 'created_at', 'updated_at', 'deleted_at', 
     ];
 
     /**
@@ -40,5 +40,15 @@ class User extends Authenticatable
     public function posts()
     {
         return $this->hasMany(Post::class);
+    }
+
+    public function applications()
+    {
+        return $this->hasMany(Application::class);
+    }
+
+    public function apartments()
+    {
+        return $this->belongsTo(Apartment::class);
     }
 }

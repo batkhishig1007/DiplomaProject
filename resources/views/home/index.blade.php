@@ -25,7 +25,8 @@
                 <h1 class="u-text u-text-black u-text-default u-title u-text-1">
                     {{$slide->title}}
                 </h1>
-                <a href="{{URL::to('/news/'.$slide->id)}}" class="u-btn u-button-style u-palette-2-base u-btn-1">Цааш
+                <a href="{{URL::to('home/news/'.$slide->id)}}"
+                    class="u-btn u-button-style u-palette-2-base u-btn-1">Цааш
                     Унших</a>
             </div>
         </div>
@@ -66,283 +67,28 @@
 <section class="u-align-center u-clearfix u-white u-section-2" id="carousel_bc4d">
     <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-text u-text-1"><b>Сүүлийн мэдээ мэдээлэл</b></h3>
-        <!--blog-->
-        <!--blog_options_json-->
-        <!--{"type":"Recent","source":"","tags":"","count":""}-->
-        <!--/blog_options_json-->
         <div class="u-blog u-blog-1">
-            <div class="u-repeater u-repeater-1">
-                <!--blog_post-->
-                <div class="
-                u-align-center
-                u-blog-post
-                u-container-style
-                u-repeater-item
-                u-white
-                u-repeater-item-1
-              ">
-                    <div class="
-                  u-container-layout u-similar-container u-container-layout-1
-                ">
-                        <a class="u-post-header-link" href="blog/post-5.html">
-                            <!--blog_post_image-->
-                            <img class="u-blog-control u-image u-image-1" src="images/medee1.png" data-image-width="792"
-                                data-image-height="271" />
-                            <!--/blog_post_image-->
+            <div class="u-repeater u-repeater-{{$i}}">
+                @foreach($postdata as $i=>$value)
+                <div class="u-align-center u-blog-post u-container-style
+                u-repeater-item u-white u-repeater-item-{{$i}}">
+                    <div class="u-container-layout u-similar-container u-container-layout-{{$i}}">
+                        <a class="u-post-header-link" href="{{URL::to('home/news/'.$value->id)}}">
+                            <img class="u-blog-control u-image u-image-1" src="{{URL::to('/uploads/'.$value->image)}}"
+                                data-image-width="792" data-image-height="271">
                         </a>
-                        <!--blog_post_metadata-->
                         <div class="u-blog-control u-metadata u-text-grey-30 u-metadata-1">
-                            <!--blog_post_metadata_date-->
-                            <span class="u-meta-date u-meta-icon">
-                                <!--blog_post_metadata_date_content-->Wed Dec 8 2021
-                                <!--/blog_post_metadata_date_content-->
-                            </span>
-                            <!--/blog_post_metadata_date-->
-                            <!--blog_post_metadata_comments-->
-                            <span class="u-meta-comments u-meta-icon">
-                                <!--blog_post_metadata_comments_content-->Comments (0)
-                                <!--/blog_post_metadata_comments_content-->
-                            </span>
-                            <!--/blog_post_metadata_comments-->
+                            <span class="u-meta-date u-meta-icon">Wed Dec 8 2021</span>
+                            <span class="u-meta-comments u-meta-icon">Comments (0)</span>
                         </div>
-                        <!--/blog_post_metadata-->
-                        <!--blog_post_header-->
                         <h4 class="u-blog-control u-text u-text-2">
-                            <a class="u-post-header-link" href="blog/post-5.html">
-                                <!--blog_post_header_content-->ВАКЦИНЖУУЛАЛТЫН ЦЭГ
-                                <!--/blog_post_header_content-->
-                            </a>
+                            <a class="u-post-header-link"
+                                href="{{URL::to('home/news/'.$value->id)}}">{{$value->title}}</a>
                         </h4>
-                        <!--/blog_post_header-->
                     </div>
                 </div>
-                <!--/blog_post-->
-                <!--blog_post-->
-                <div class="
-                u-align-center
-                u-blog-post
-                u-container-style
-                u-repeater-item
-                u-white
-                u-repeater-item-2
-              ">
-                    <div class="
-                  u-container-layout u-similar-container u-container-layout-2
-                ">
-                        <a class="u-post-header-link" href="blog/post-4.html">
-                            <!--blog_post_image-->
-                            <img class="u-blog-control u-image u-image-2" src="images/medee2.jpg" data-image-width="381"
-                                data-image-height="76" />
-                            <!--/blog_post_image-->
-                        </a>
-                        <!--blog_post_metadata-->
-                        <div class="u-blog-control u-metadata u-text-grey-30 u-metadata-2">
-                            <!--blog_post_metadata_date-->
-                            <span class="u-meta-date u-meta-icon">
-                                <!--blog_post_metadata_date_content-->Wed Dec 8 2021
-                                <!--/blog_post_metadata_date_content-->
-                            </span>
-                            <!--/blog_post_metadata_date-->
-                            <!--blog_post_metadata_comments-->
-                            <span class="u-meta-comments u-meta-icon">
-                                <!--blog_post_metadata_comments_content-->Comments (0)
-                                <!--/blog_post_metadata_comments_content-->
-                            </span>
-                            <!--/blog_post_metadata_comments-->
-                        </div>
-                        <!--/blog_post_metadata-->
-                        <!--blog_post_header-->
-                        <h4 class="u-blog-control u-text u-text-3">
-                            <a class="u-post-header-link" href="blog/post-4.html">
-                                <!--blog_post_header_content-->АЖ АХУЙН НЭГЖ, БАЙГУУЛЛАГЫН тооллого
-                                <!--/blog_post_header_content-->
-                            </a>
-                        </h4>
-                        <!--/blog_post_header-->
-                    </div>
-                </div>
-                <!--/blog_post-->
-                <!--blog_post-->
-                <div class="
-                u-align-center
-                u-blog-post
-                u-container-style
-                u-repeater-item
-                u-white
-                u-repeater-item-3
-              ">
-                    <div class="
-                  u-container-layout u-similar-container u-container-layout-3
-                ">
-                        <a class="u-post-header-link" href="blog/post-3.html">
-                            <!--blog_post_image-->
-                            <img class="u-blog-control u-image u-image-3" src="images/medee14.png"
-                                data-image-width="960" data-image-height="720" />
-                            <!--/blog_post_image-->
-                        </a>
-                        <!--blog_post_metadata-->
-                        <div class="u-blog-control u-metadata u-text-grey-30 u-metadata-3">
-                            <!--blog_post_metadata_date-->
-                            <span class="u-meta-date u-meta-icon">
-                                <!--blog_post_metadata_date_content-->Wed Dec 8 2021
-                                <!--/blog_post_metadata_date_content-->
-                            </span>
-                            <!--/blog_post_metadata_date-->
-                            <!--blog_post_metadata_comments-->
-                            <span class="u-meta-comments u-meta-icon">
-                                <!--blog_post_metadata_comments_content-->Comments (0)
-                                <!--/blog_post_metadata_comments_content-->
-                            </span>
-                            <!--/blog_post_metadata_comments-->
-                        </div>
-                        <!--/blog_post_metadata-->
-                        <!--blog_post_header-->
-                        <h4 class="u-blog-control u-text u-text-4">
-                            <a class="u-post-header-link" href="blog/post-3.html">
-                                <!--blog_post_header_content-->“Шар дарцаг” аян Хан-Уул дүүрэгт үргэлжилж байна
-                                <!--/blog_post_header_content-->
-                            </a>
-                        </h4>
-                        <!--/blog_post_header-->
-                    </div>
-                </div>
-                <!--/blog_post-->
-                <!--blog_post-->
-                <div class="
-                u-align-center
-                u-blog-post
-                u-container-style
-                u-repeater-item
-                u-white
-                u-repeater-item-3
-              ">
-                    <div class="
-                  u-container-layout u-similar-container u-container-layout-3
-                ">
-                        <a class="u-post-header-link" href="blog/post-2.html">
-                            <!--blog_post_image-->
-                            <img class="u-blog-control u-image u-image-4" src="images/medee7.png" data-image-width="700"
-                                data-image-height="480" />
-                            <!--/blog_post_image-->
-                        </a>
-                        <!--blog_post_metadata-->
-                        <div class="u-blog-control u-metadata u-text-grey-30 u-metadata-3">
-                            <!--blog_post_metadata_date-->
-                            <span class="u-meta-date u-meta-icon">
-                                <!--blog_post_metadata_date_content-->Wed Dec 8 2021
-                                <!--/blog_post_metadata_date_content-->
-                            </span>
-                            <!--/blog_post_metadata_date-->
-                            <!--blog_post_metadata_comments-->
-                            <span class="u-meta-comments u-meta-icon">
-                                <!--blog_post_metadata_comments_content-->Comments (0)
-                                <!--/blog_post_metadata_comments_content-->
-                            </span>
-                            <!--/blog_post_metadata_comments-->
-                        </div>
-                        <!--/blog_post_metadata-->
-                        <!--blog_post_header-->
-                        <h4 class="u-blog-control u-text u-text-4">
-                            <a class="u-post-header-link" href="blog/post-2.html">
-                                <!--blog_post_header_content-->“Өвлийн идэш” арга хэмжээ болно
-                                <!--/blog_post_header_content-->
-                            </a>
-                        </h4>
-                        <!--/blog_post_header-->
-                    </div>
-                </div>
-                <!--/blog_post-->
-                <!--blog_post-->
-                <div class="
-                u-align-center
-                u-blog-post
-                u-container-style
-                u-repeater-item
-                u-white
-                u-repeater-item-3
-              ">
-                    <div class="
-                  u-container-layout u-similar-container u-container-layout-3
-                ">
-                        <a class="u-post-header-link" href="blog/post-1.html">
-                            <!--blog_post_image-->
-                            <img class="u-blog-control u-image u-image-5" src="images/medee11.jpg"
-                                data-image-width="626" data-image-height="417" />
-                            <!--/blog_post_image-->
-                        </a>
-                        <!--blog_post_metadata-->
-                        <div class="u-blog-control u-metadata u-text-grey-30 u-metadata-3">
-                            <!--blog_post_metadata_date-->
-                            <span class="u-meta-date u-meta-icon">
-                                <!--blog_post_metadata_date_content-->Wed Dec 8 2021
-                                <!--/blog_post_metadata_date_content-->
-                            </span>
-                            <!--/blog_post_metadata_date-->
-                            <!--blog_post_metadata_comments-->
-                            <span class="u-meta-comments u-meta-icon">
-                                <!--blog_post_metadata_comments_content-->Comments (0)
-                                <!--/blog_post_metadata_comments_content-->
-                            </span>
-                            <!--/blog_post_metadata_comments-->
-                        </div>
-                        <!--/blog_post_metadata-->
-                        <!--blog_post_header-->
-                        <h4 class="u-blog-control u-text u-text-4">
-                            <a class="u-post-header-link" href="blog/post-1.html">
-                                <!--blog_post_header_content-->Нийслэлийн Газар зохион байгуулалтын ерөнхий төлөвлөгөөг
-                                шинэчлэн боловсруулж байна
-                                <!--/blog_post_header_content-->
-                            </a>
-                        </h4>
-                        <!--/blog_post_header-->
-                    </div>
-                </div>
-                <!--/blog_post-->
-                <!--blog_post-->
-                <div class="
-                u-align-center
-                u-blog-post
-                u-container-style
-                u-repeater-item
-                u-white
-                u-repeater-item-3
-              ">
-                    <div class="
-                  u-container-layout u-similar-container u-container-layout-3
-                ">
-                        <a class="u-post-header-link" href="blog/post.html">
-                            <!--blog_post_image-->
-                            <img class="u-blog-control u-image u-image-6" src="images/medee13.jpg"
-                                data-image-width="400" data-image-height="266" />
-                            <!--/blog_post_image-->
-                        </a>
-                        <!--blog_post_metadata-->
-                        <div class="u-blog-control u-metadata u-text-grey-30 u-metadata-3">
-                            <!--blog_post_metadata_date-->
-                            <span class="u-meta-date u-meta-icon">
-                                <!--blog_post_metadata_date_content-->Wed Dec 8 2021
-                                <!--/blog_post_metadata_date_content-->
-                            </span>
-                            <!--/blog_post_metadata_date-->
-                            <!--blog_post_metadata_comments-->
-                            <span class="u-meta-comments u-meta-icon">
-                                <!--blog_post_metadata_comments_content-->Comments (0)
-                                <!--/blog_post_metadata_comments_content-->
-                            </span>
-                            <!--/blog_post_metadata_comments-->
-                        </div>
-                        <!--/blog_post_metadata-->
-                        <!--blog_post_header-->
-                        <h4 class="u-blog-control u-text u-text-4">
-                            <a class="u-post-header-link" href="blog/post.html">
-                                <!--blog_post_header_content-->Хан-Уул лиг” сагсан бөмбөгийн тэмцээн
-                                <!--/blog_post_header_content-->
-                            </a>
-                        </h4>
-                        <!--/blog_post_header-->
-                    </div>
-                </div>
-                <!--/blog_post-->
+                @endforeach
+
             </div>
         </div>
         <!--/blog-->
@@ -383,7 +129,7 @@
                             үнэлэлт дүгнэлт өгч, гэмт хэрэгтэй тэмцэх, нийгмийн хэв
                             журам хамгаалах, урьдчилан сэргийлэх ажлыг иргэд, төрийн
                             болон төрийн бус байгууллагатай хамтран хэрэгжүүлэх.
-                            <br>&nbsp;Утас: +976 9191-7439
+                            <br>&nbsp;<strong>Утас: +976 9191-7439</strong>
                         </p>
                         <div class="
                     u-custom-item u-social-icons u-spacing-10 u-social-icons-1
@@ -430,7 +176,7 @@
                             хүргэх. Эрүүл мэндийн төвийн хүртээмж үйлчилгээг өргөтгөх
                             зорилгоор иргэдийг цахим карт, хувийн эрүүл мэндийн
                             нэгдсэн мэдээллийн сантай болгох боломжийг бүрдүүлэх.
-                            <br>&nbsp;Утас: +976 7010-5003
+                            <br>&nbsp;<strong>Утас: +976 7010-5003</strong>
                         </p>
                         <div class="
                     u-custom-item u-social-icons u-spacing-10 u-social-icons-2
@@ -477,7 +223,7 @@
                             Иргэний танхимаас зохион байгуулж буй хэлэлцүүлэг,
                             сургалт, олон нийтийн арга хэмжээний талаарх тайлан
                             мэдээг гаргаж иргэний танхимд хүргэх.
-                            <br>&nbsp;Утас: +976 9109-3900
+                            <br>&nbsp;<strong>Утас: +976 9109-3900</strong>
                         </p>
                         <div class="
                     u-custom-item u-social-icons u-spacing-10 u-social-icons-3

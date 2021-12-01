@@ -28,12 +28,6 @@
     @method('PUT')
 
     <div class="row">
-        <!-- <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>ID дугаар:</strong>
-                    <input type="number" name="id" value="{{ $category->id }}" class="form-control" placeholder="id">
-                </div>
-            </div> -->
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Категори нэр:</strong>

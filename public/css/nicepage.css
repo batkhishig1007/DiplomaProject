@@ -4856,6 +4856,7 @@ ol {
     -ms-user-select: none;
     user-select: none;
     vertical-align: middle;
+    align-items: center !important;
     text-align: center;
     padding: 10px 30px;
     border-radius: 0;
@@ -13397,6 +13398,8 @@ section.u-image,
     flex-wrap: wrap;
     min-height: 100%;
     max-width: 100%;
+    align-items: center !important;
+    text-align: center !important;
 }
 .u-layout-cell {
     position: relative;
@@ -28383,6 +28386,7 @@ li.active > a.u-button-style.u-button-style.u-border-active-palette-2 {
     border-color: #e68387 !important;
     color: #e68387 !important;
     background-color: transparent !important;
+    align-items: center !important;
 }
 .u-button-style.u-border-palette-2-light-1:hover,
 .u-button-style.u-border-palette-2-light-1:focus {
@@ -35457,6 +35461,7 @@ a.u-link.u-text-hover-black:hover {
 .u-text-body-color,
 a.u-button-style.u-text-body-color,
 a.u-button-style.u-text-body-color[class*="u-border-"] {
+    align-items: center !important;
     color: #111111 !important;
 }
 a.u-button-style.u-text-body-color:hover,
@@ -37471,7 +37476,7 @@ h1:not(.u-title) {
 }
 h2:not(.u-subtitle) {
     font-weight: 400;
-    font-size: 2.25rem;
+    font-size: 1.5rem;
     line-height: 1.1;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -37521,6 +37526,8 @@ p:not(.u-text-variant) {
 .u-btn {
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: 50px;
+    text-align: center !important;
 }
 blockquote {
     font-style: italic;
@@ -37536,6 +37543,7 @@ blockquote {
 ul:not(.u-unstyled) {
     margin-top: 20px;
     margin-bottom: 20px;
+    /* margin-left: 470px; */
 }
 ol {
     margin-top: 20px;
@@ -38147,6 +38155,12 @@ blockquote {
 .u-footer .u-text-8 {
     font-size: 1.125rem;
     margin: 23px 18px 18px auto;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 @media (max-width: 1199px) {
     .u-footer .u-list-1 {

@@ -65,6 +65,5 @@
             <button type="submit" class="btn btn-primary">Оруулах</button>
         </div>
     </div>
-
 </form>
 @endsection

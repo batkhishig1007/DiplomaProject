@@ -17,12 +17,17 @@
                     </div>
                     <div class="u-form-group u-form-name">
                         <label for="name-9ec1" class="u-form-control-hidden u-label"></label>
-                        <input type="text" placeholder="Товч тайлбар." id="name-9ec1" name="title"
+                        <input type="text" placeholder="Товч тайлбар" id="name-9ec1" name="title"
+                            class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+                    </div>
+                    <div class="u-form-group u-form-email">
+                        <label for="name-9ec1" class="u-form-control-hidden u-label"></label>
+                        <input type="email" placeholder="И-мэйл хаягаа оруулна уу" id="name-9ec1" name="email"
                             class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
                     </div>
                     <div class="u-form-group u-form-message">
                         <label for="message-9ec1" class="u-form-control-hidden u-label"></label>
-                        <textarea placeholder="Санал, гомдолоо бичнэ үү." rows="8" cols="50" id="message-9ec1"
+                        <textarea placeholder="Санал, гомдолоо бичнэ үү" rows="8" cols="50" id="message-9ec1"
                             name="description" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white"
                             required=""></textarea>
                     </div>

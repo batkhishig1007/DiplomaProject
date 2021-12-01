@@ -26,14 +26,14 @@
 
             @foreach ($data as $key => $value)
             <div class="u-container-style u-list-item u-repeater-item">
-                <div class="u-container-layout u-similar-container u-container-layout-1"
-                    style="background-image:  url({{URL::to('/uploads/'.$value->image)}}); " data-image-width="2000"
-                    data-image-height="1333">
-                    <h3 class="u-text u-text-default u-text-1">{{$value->title}}</h3>
-                    <p class="u-text u-text-2">>{{$value->short_description}}</p>
+                <div class="u-container-layout u-similar-container u-container-layout-1">
+                    <img class="u-blog-control u-image u-image-1" src="{{URL::to('/uploads/'.$value->image)}}"
+                        data-image-width="2000" data-image-height="1333">
+                    <h4 class="u-blog-control u-text u-text-2">{{$value->title}}</h4>
+                    <!-- <p class="u-text u-text-2">>{{$value->short_description}}</p> -->
                     <a class="u-active-none u-border-2 u-border-hover-palette-2-base u-border-palette-2-light-1 u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-1"
                         href="{{ route('news.show',$value->id) }}">
-                        дэлгэрэнгүй
+                        Дэлгэрэнгүй
                     </a>
                 </div>
             </div>

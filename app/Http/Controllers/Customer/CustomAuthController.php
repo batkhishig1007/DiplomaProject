@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Hash;
 use Session;
-use App\Models\User;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 use App\Category;
 class CustomAuthController extends Controller
@@ -13,8 +13,13 @@ class CustomAuthController extends Controller
 
     public function index()
     {
+        $admin_type = null;
         $menu_categories = Category::whereNull('deleted_at')->get();
-        return view('auth.login', compact('menu_categories'));
+
+        if(Auth::user()){
+            $admin_type = User::find(Auth::user()->id)->admin_type;
+        }
+        return view('auth.login', compact('menu_categories', 'admin_type'));
     }  
       
 

@@ -3,7 +3,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Application;
 use App\Category;
+use App\User;
 use Illuminate\Support\Facades\Auth;
+
 
 class CustomerApplicationController extends Controller
 {
@@ -14,9 +16,14 @@ class CustomerApplicationController extends Controller
      */
     public function index()
     {
+        $admin_type = null;
         $menu_categories = Category::whereNull('deleted_at')->get();
         $data = Application::where('user_id', Auth::user()->id)->paginate(9);
-        return view('home.applications.index',compact('data', 'menu_categories'))->with('i', (request()->input('page', 1) - 1) * 9);
+
+        if(Auth::user()){
+            $admin_type = User::find(Auth::user()->id)->admin_type;
+        }
+        return view('home.applications.index',compact('data', 'menu_categories', 'admin_type'))->with('i', (request()->input('page', 1) - 1) * 9);
     }
 
     /**

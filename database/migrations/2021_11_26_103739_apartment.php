@@ -17,6 +17,7 @@ class Apartment extends Migration
             $table->bigIncrements('id');
             $table->string('apartment_name')->nullable()->default(null);
             $table->string('apartment_number')->nullable()->default(null);
+            $table->unsignedBigInteger('user_id')->nullable()->default(null);
             $table->timestamps();
             $table->softDeletes();
         });

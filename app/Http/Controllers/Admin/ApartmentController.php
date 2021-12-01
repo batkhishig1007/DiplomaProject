@@ -13,7 +13,20 @@ class ApartmentController extends Controller
      */
     public function index()
     {
-        $data = Apartment::latest()->paginate(9);
+        $user = null;
+        if(Auth::user()){
+            $user = User::find(Auth::user()->id);
+        }
+        
+        $data = null;
+
+        if($user->admin_type == 'operator'){
+            $data = Apartment::whereIn('id', $user->apartments)->latest()->paginate(9);
+        }
+
+        if($user->admin_type == 'admin'){
+            $data = Apartment::latest()->paginate(9);
+        }
     
         return view('admin.apartments.index',compact('data'))
             ->with('i', (request()->input('page', 1) - 1) * 9);

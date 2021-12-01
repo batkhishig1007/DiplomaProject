@@ -27,6 +27,11 @@ class Application extends Model
 
     public function users()
     {
-        return $this->hasMany(User::class);
+        return $this->belongsTo(User::class);
+    }
+
+    public function posts()
+    {
+        return $this->belongsTo(User::class);
     }
 }

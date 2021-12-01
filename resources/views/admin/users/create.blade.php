@@ -1,5 +1,5 @@
 @extends('web.admin')
-  
+
 @section('content')
 <div class="row">
     <div class="col-lg-12 margin-tb">
@@ -11,22 +11,22 @@
         </div>
     </div>
 </div>
-   
+
 @if ($errors->any())
-    <div class="alert alert-danger">
-        <strong>Whoops!</strong> There were some problems with your input.<br><br>
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
+<div class="alert alert-danger">
+    <strong>Whoops!</strong> There were some problems with your input.<br><br>
+    <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
 @endif
-   
+
 <form action="{{ route('users.store') }}" method="POST">
     @csrf
-  
-     <div class="row">
+
+    <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Хэрэглэгчийн нэр:</strong>
@@ -78,39 +78,28 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Хүйс:</strong>
-                <select name="gender" class="form-control"  >
+                <select name="gender" class="form-control">
                     <option value="male">Эрэгтэй</option>
                     <option value="female">Эмэгтэй</option>
-                    <option value="undefined">Тодорхойгүй</option> 
-                <select>
+                    <option value="undefined">Тодорхойгүй</option>
+                    <select>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Хэрэглэгчийн төрөл:</strong>
-                <select name="user_type" class="form-control"  >
+                <select name="user_type" class="form-control">
                     <option value="admin">Админ</option>
+
                     <option value="operator">Оператор</option>
-                    <option value="user">Хэрэглэгч</option> 
-                <select>
+                    <option value="undefined">undefined</option>
+                    <select>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Хотын ID:</strong>
-                <input type="number" name="city_id" class="form-control" placeholder="Enter city_id">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Дүүргийн ID:</strong>
-                <input type="number" name="district_id" class="form-control" placeholder="Enter district_id">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Хорооны ID:</strong>
-                <input type="number" name="ward_id" class="form-control" placeholder="Enter ward_id">
+                <strong>Апартмент ID:</strong>
+                <input type="number" name="apartment_id" class="form-control" placeholder="Enter apartment_id">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -123,10 +112,10 @@
             <div class="form-group">
                 <strong>Идэвхтэй эсэх:</strong>
                 <!-- <input type="radio" name="is_active" class="form-control" placeholder="Enter is_active"> -->
-                <select name="is_active" class="form-control"  >
-                    <option value="true" >Идэвхитэй</option>
-                    <option value="false" >Идэвхигүй</option>
-                <select>
+                <select name="is_active" class="form-control">
+                    <option value="true">Идэвхитэй</option>
+                    <option value="false">Идэвхигүй</option>
+                    <select>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -136,9 +125,9 @@
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Оруулах</button>
+            <button type="submit" class="btn btn-primary">Оруулах</button>
         </div>
     </div>
-   
+
 </form>
 @endsection

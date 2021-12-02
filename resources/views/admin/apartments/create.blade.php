@@ -31,13 +31,31 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Апартмент нэр:</strong>
-                <input type="text" name="apartment_name" class="form-control" placeholder="Enter apartment_name">
+                <select class="form-select form-control" name="apartment_id" aria-label="Сонгоно уу">
+                    @foreach ($apartment as $key => $value)
+                    <option value="{{$value->id}}" selected>{{$value->apartment_name}}</option>
+                    @endforeach
+                </select>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Апартмент дугаар:</strong>
-                <input type="number" name="apartment_nиmber" class="form-control" placeholder="Enter apartment_number">
+                <select class="form-select form-control" name="apartment_id" aria-label="Сонгоно уу">
+                    @foreach ($apartment as $key => $value)
+                    <option value="{{$value->id}}" selected>{{$value->apartment_number}}</option>
+                    @endforeach
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Хэрэглэгчийн дугаар:</strong>
+                <select class="form-select form-control" name="user_id" aria-label="Сонгоно уу">
+                    @foreach ($user as $key => $value)
+                    <option value="{{$value->id}}" selected>{{$value->username}}</option>
+                    @endforeach
+                </select>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

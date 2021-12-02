@@ -30,16 +30,32 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Категори нэр:</strong>
-                <input type="text" name="apartment_name" value="{{ $apartment->apartment_name }}" class="form-control"
-                    placeholder="apartment_name">
+                <strong>Апартмент нэр:</strong>
+                <select class="form-select form-control" name="apartment_id" aria-label="Сонгоно уу">
+                    @foreach ($apartment as $key => $value)
+                    <option value="{{$value->id}}" selected>{{$value->apartment_name}}</option>
+                    @endforeach
+                </select>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Категори дугаар:</strong>
-                <input type="number" name="apartment_number" value="{{ $apartment->apartment_number }}"
-                    class="form-control" placeholder="apartment_number">
+                <strong>Апартмент дугаар:</strong>
+                <select class="form-select form-control" name="apartment_id" aria-label="Сонгоно уу">
+                    @foreach ($apartment as $key => $value)
+                    <option value="{{$value->id}}" selected>{{$value->apartment_number}}</option>
+                    @endforeach
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Хэрэглэгчийн дугаар:</strong>
+                <select class="form-select form-control" name="user_id" aria-label="Сонгоно уу">
+                    @foreach ($user as $key => $value)
+                    <option value="{{$value->id}}" selected>{{$value->username}}</option>
+                    @endforeach
+                </select>
             </div>
         </div>
 

@@ -1,8 +1,11 @@
 <?php
 namespace App\Http\Controllers\Admin;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Application;
+use App\Post;
+use App\User;
 
 class ApplicationController extends Controller
 {
@@ -13,8 +16,10 @@ class ApplicationController extends Controller
      */
     public function index()
     {
+        $user = User::all();
+        $post = Post::all();
         $data = Application::paginate(5);
-        return view('admin.applications.index',compact('data'))->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('admin.applications.index',compact('data', 'post', 'user'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -24,7 +29,10 @@ class ApplicationController extends Controller
      */
     public function create()
     {
-        return view('admin.applications.create');
+        $user = User::all();
+        $post = Post::all();
+        $data = Application::paginate(5);
+        return view('admin.applications.create',compact('data', 'post', 'user'));
     }
 
     /**
@@ -75,7 +83,10 @@ class ApplicationController extends Controller
      */
     public function show(Application $application)
     {
-        return view('admin.applications.show',compact('application'));
+        $user = User::all();
+        $post = Post::all();
+        return view('admin.applications.show',compact('application', 'post', 
+    'user'));
     }
 
     /**
@@ -86,7 +97,9 @@ class ApplicationController extends Controller
      */
     public function edit(Application $application)
     {
-        return view('admin.applications.edit',compact('application'));
+        $user = User::all();
+        $post = Post::all();
+        return view('admin.applications.edit',compact('application', 'post', 'user'));
     }
 
     /**

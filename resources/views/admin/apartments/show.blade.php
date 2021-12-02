@@ -21,14 +21,20 @@
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Категори нэр:</strong>
+            <strong>Апартмент нэр:</strong>
             {{ $apartment->apartment_name }}
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Үндсэн ангиллын ID:</strong>
-            {{ $apartment->main_id }}
+            <strong>Апартмент дугаар:</strong>
+            {{ $apartment->apartment_number }}
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Хэрэглэгчийн ID:</strong>
+            {{ $apartment->user_id }}
         </div>
     </div>
 </div>

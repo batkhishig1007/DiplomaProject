@@ -33,12 +33,6 @@
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Зураг оруулах:</strong>
-            <img src="/uploads/{{ $application->image }}" width="300px">
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
             <strong>Мэдээний ID:</strong>
             {{ $application->post_id }}
         </div>

@@ -21,16 +21,54 @@ class DatabaseSeeder extends Seeder
         // $c4 = DB::table('categories')->insert(['category_name' =>"Шуурхай зөвлөгөөн"]);
         // DB::table('categories')->insert(['category_name' =>"мэдээний ангилал 5"]);
 
-        // DB::table('apartments')->insert(['apartment_name' =>"Саарал", 'apartment_number'=> "3, 4, 7, 8, 8А, 9, 10, 18, 20, 21, 22, 23, 28, 29, 30, 31, 33"]);
-        // DB::table('apartments')->insert(['apartment_name' =>"Нэхмэл", 'apartment_number'=> "1, 2, 7, 10, 11, 12, 13, 16, 17, 18"]);
-        // DB::table('apartments')->insert(['apartment_name' => "Эко", 'apartment_number'=> "12, 17"]);
-        // DB::table('apartments')->insert(['apartment_name' =>"То Ван", 'apartment_number'=> "20, 24"]);
-        // DB::table('apartments')->insert(['apartment_name' =>"Гурван өндөр", 'apartment_number'=> "12А, 12Б, 12В"]);
-        // DB::table('apartments')->insert(['apartment_name' =>"ЧӨЧ", 'apartment_number'=> "5, 6А"]);
-        // DB::table('apartments')->insert(['apartment_name' =>"Нутгийн буян", 'apartment_number'=> "14, 37А, 37Б"]);
-        // DB::table('apartments')->insert(['apartment_name' =>"Ягаан", 'apartment_number'=> "35А, 35Б"]);
-        // DB::table('apartments')->insert(['apartment_name' =>"Гааль", 'apartment_number'=> "17"]);
-        // DB::table('apartments')->insert(['apartment_name' =>"Дундгол", 'apartment_number'=> "28, 29, 30, 31, 32А, 33, 34, 35А, 35Б"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Саарал", 'apartment_number'=> "3-7"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Саарал", 'apartment_number'=> "4-7"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Саарал", 'apartment_number'=> "7-7"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Саарал", 'apartment_number'=> "8-4"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Саарал", 'apartment_number'=> "8А-4"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Саарал", 'apartment_number'=> "9-4"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Саарал", 'apartment_number'=> "10-4"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Саарал", 'apartment_number'=> "18-5"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Саарал", 'apartment_number'=> "20-6"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Саарал", 'apartment_number'=> "21-6"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Саарал", 'apartment_number'=> "22-5"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Саарал", 'apartment_number'=> "23-5"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Саарал", 'apartment_number'=> "28-10"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Саарал", 'apartment_number'=> "29-6"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Саарал", 'apartment_number'=> "30-10"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Саарал", 'apartment_number'=> "31-8"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Саарал", 'apartment_number'=> "33-8"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Нэхмэл", 'apartment_number'=> "1-1"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Нэхмэл", 'apartment_number'=> "2-1"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Нэхмэл", 'apartment_number'=> "7-1"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Нэхмэл", 'apartment_number'=> "10-1"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Нэхмэл", 'apartment_number'=> "11-2"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Нэхмэл", 'apartment_number'=> "12-2"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Нэхмэл", 'apartment_number'=> "13-2"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Нэхмэл", 'apartment_number'=> "16-2"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Нэхмэл", 'apartment_number'=> "17-2"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Нэхмэл", 'apartment_number'=> "18-2"]);
+        // DB::table('apartments')->insert(['apartment_name' => "Эко", 'apartment_number'=> "12-2"]);
+        // DB::table('apartments')->insert(['apartment_name' => "Эко", 'apartment_number'=> "17-2"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"То Ван", 'apartment_number'=> "20-4"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"То Ван", 'apartment_number'=> "24-2"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Гурван өндөр", 'apartment_number'=> "12А-3"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Гурван өндөр", 'apartment_number'=> "12Б-3"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Гурван өндөр", 'apartment_number'=> "12В-3"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"ЧӨЧ", 'apartment_number'=> "5-1"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"ЧӨЧ", 'apartment_number'=> "6А-1"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Нутгийн буян", 'apartment_number'=> "14-9"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Нутгийн буян", 'apartment_number'=> "37А-9"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Нутгийн буян", 'apartment_number'=> "37Б-9"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Ягаан", 'apartment_number'=> "35А-11"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Ягаан", 'apartment_number'=> "35Б-11"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Гааль", 'apartment_number'=> "17-10"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Дундгол", 'apartment_number'=> "28-10"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Дундгол", 'apartment_number'=> "29-8"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Дундгол", 'apartment_number'=> "30-8"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Дундгол", 'apartment_number'=> "31-8"]);
+        // DB::table('apartments')->insert(['apartment_name' =>"Дундгол", 'apartment_number'=> "32А-8"]);
+
         // DB::table('posts')->insert(['title' =>"ВАКЦИНЖУУЛАЛТЫН ЦЭГ", 'short_description'=> "ВАКЦИНЖУУЛАЛТЫН ЦЭГ", 'category_id'=> $c1]);
         // DB::table('posts')->insert(['title' =>"АЖ АХУЙН НЭГЖ, БАЙГУУЛЛАГЫН тооллого", 'short_description'=> "АЖ АХУЙН НЭГЖ, БАЙГУУЛЛАГЫН тооллого.", 'category_id'=> $c1]);
         // DB::table('posts')->insert(['title' =>"Зорилтот бүлгийн иргэдийн 50 хувь нэмэлт тунд хамрагдвал бүх төрлийн хичээл, сургалтын үйл ажиллагааг бүрэн нээнэ", 'short_description'=> "Зорилтот бүлгийн иргэдийн 50 хувь нэмэлт тунд хамрагдвал бүх төрлийн хичээл, сургалтын үйл ажиллагааг бүрэн нээнэ.", 'category_id'=> $c1]);
@@ -87,15 +125,15 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // DB::table('users')->insert([
-        //     'username' =>"bat",
+        //     'username' =>"baigal",
         //     'password' => Hash::make('p@ssw0rd1'),
-        //     'firstname' => 'Bat',
+        //     'firstname' => 'Baigali',
         //     'lastname' => 'Tab',
         //     'rd' => 'UK97123101',
-        //     'email' => 'bat@gmail.com',
-        //     'phone' => '+9769928821',
+        //     'email' => 'baigal@gmail.com',
+        //     'phone' => '+97696057700',
         //     'birthday' => '1999/10/05',
-        //     'gender' => 'male',
+        //     'gender' => 'female',
         //     'admin_type' => 'operator',
         //     'apartment_id' => '23',
         //     'address' => "KHUD 2nd section",
@@ -103,15 +141,15 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // DB::table('users')->insert([
-        //     'username' =>"dorj",
+        //     'username' =>"tseren",
         //     'password' => Hash::make('p@ssw0rd2'),
-        //     'firstname' => 'Dorj',
+        //     'firstname' => 'Tserennadmid',
         //     'lastname' => 'Jrod',
         //     'rd' => 'UK97123102',
-        //     'email' => 'dorj@gmail.com',
-        //     'phone' => '+9769928822',
+        //     'email' => 'tseren@gmail.com',
+        //     'phone' => '+97694742804',
         //     'birthday' => '1999/10/06',
-        //     'gender' => 'male',
+        //     'gender' => 'female',
         //     'admin_type' => 'operator',
         //     'apartment_id' => '18',
         //     'address' => "KHUD 2nd section",
@@ -119,13 +157,13 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // DB::table('users')->insert([
-        //     'username' =>"tulga",
+        //     'username' =>"amar",
         //     'password' => Hash::make('p@ssw0rd3'),
-        //     'firstname' => 'Tulga',
+        //     'firstname' => 'Amarjargal',
         //     'lastname' => 'Aglut',
         //     'rd' => 'UK97123103',
-        //     'email' => 'tulga@gmail.com',
-        //     'phone' => '+9769928823',
+        //     'email' => 'amar@gmail.com',
+        //     'phone' => '+97691373800',
         //     'birthday' => '1999/10/08',
         //     'gender' => 'male',
         //     'admin_type' => 'operator',
@@ -135,15 +173,15 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // DB::table('users')->insert([
-        //     'username' =>"sukh",
+        //     'username' =>"bayrmaa",
         //     'password' => Hash::make('p@ssw0rd4'),
-        //     'firstname' => 'Sukh',
+        //     'firstname' => 'Bayrmaa',
         //     'lastname' => 'Khus',
         //     'rd' => 'UK97123104',
-        //     'email' => 'sukh@gmail.com',
-        //     'phone' => '+9769928824',
+        //     'email' => 'bayrmaa@gmail.com',
+        //     'phone' => '+97699916781',
         //     'birthday' => '1999/10/09',
-        //     'gender' => 'male',
+        //     'gender' => 'female',
         //     'admin_type' => 'operator',
         //     'apartment_id' => '28',
         //     'address' => "KHUD 2nd section",
@@ -151,15 +189,15 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // DB::table('users')->insert([
-        //     'username' =>"khuyag",
+        //     'username' =>"nym",
         //     'password' => Hash::make('p@ssw0rd5'),
-        //     'firstname' => 'Khuyag',
+        //     'firstname' => 'Nymtsetseg',
         //     'lastname' => 'Gayukh',
         //     'rd' => 'UK97123105',
-        //     'email' => 'khuyag@gmail.com',
-        //     'phone' => '+9769928825',
+        //     'email' => 'nym@gmail.com',
+        //     'phone' => '+97699285790',
         //     'birthday' => '1999/10/10',
-        //     'gender' => 'male',
+        //     'gender' => 'female',
         //     'admin_type' => 'operator',
         //     'apartment_id' => '30',
         //     'address' => "KHUD 2nd section",
@@ -167,15 +205,15 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // DB::table('users')->insert([
-        //     'username' =>"lodoi",
+        //     'username' =>"ynjin",
         //     'password' => Hash::make('p@ssw0rd6'),
-        //     'firstname' => 'Lodoi',
+        //     'firstname' => 'Ynjindulam',
         //     'lastname' => 'Oidol',
         //     'rd' => 'UK97123106',
-        //     'email' => 'lodoi@gmail.com',
-        //     'phone' => '+9769928826',
+        //     'email' => 'ynjin@gmail.com',
+        //     'phone' => '+97699262131',
         //     'birthday' => '1999/10/11',
-        //     'gender' => 'male',
+        //     'gender' => 'female',
         //     'admin_type' => 'operator',
         //     'apartment_id' => '31',
         //     'address' => "KHUD 2nd section",
@@ -183,13 +221,13 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // DB::table('users')->insert([
-        //     'username' =>"chimeg",
+        //     'username' =>"odon",
         //     'password' => Hash::make('p@ssw0rd7'),
-        //     'firstname' => 'Chimeg',
+        //     'firstname' => 'Odonchimeg',
         //     'lastname' => 'Gemich',
         //     'rd' => 'UK97123107',
-        //     'email' => 'chimeg@gmail.com',
-        //     'phone' => '+9769928827',
+        //     'email' => 'odon@gmail.com',
+        //     'phone' => '+9799909257',
         //     'birthday' => '1999/10/12',
         //     'gender' => 'female',
         //     'admin_type' => 'operator',
@@ -199,13 +237,13 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // DB::table('users')->insert([
-        //     'username' =>"dulam",
+        //     'username' =>"erdene",
         //     'password' => Hash::make('p@ssw0rd8'),
-        //     'firstname' => 'Dulam',
+        //     'firstname' => 'Erdenebolor',
         //     'lastname' => 'Malud',
         //     'rd' => 'UK97123108',
-        //     'email' => 'dulam@gmail.com',
-        //     'phone' => '+9769928828',
+        //     'email' => 'erdene@gmail.com',
+        //     'phone' => '+97680132329',
         //     'birthday' => '1999/10/13',
         //     'gender' => 'female',
         //     'admin_type' => 'operator',
@@ -215,13 +253,13 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // DB::table('users')->insert([
-        //     'username' =>"tsetseg",
+        //     'username' =>"zaya",
         //     'password' => Hash::make('p@ssw0rd9'),
-        //     'firstname' => 'Tsetseg',
+        //     'firstname' => 'Amarzaya',
         //     'lastname' => 'Getsets',
         //     'rd' => 'UK97123109',
-        //     'email' => 'tsetseg@gmail.com',
-        //     'phone' => '+9769928829',
+        //     'email' => 'zaya@gmail.com',
+        //     'phone' => '+97699299193',
         //     'birthday' => '1999/10/14',
         //     'gender' => 'female',
         //     'admin_type' => 'operator',
@@ -231,15 +269,15 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // DB::table('users')->insert([
-        //     'username' =>"jims",
+        //     'username' =>"altan",
         //     'password' => Hash::make('p@ssw0rd10'),
-        //     'firstname' => 'Jims',
+        //     'firstname' => 'Altan-Od',
         //     'lastname' => 'Smij',
         //     'rd' => 'UK97123110',
-        //     'email' => 'jims@gmail.com',
-        //     'phone' => '+9769928830',
+        //     'email' => 'altan@gmail.com',
+        //     'phone' => '+97689454589',
         //     'birthday' => '1999/10/15',
-        //     'gender' => 'female',
+        //     'gender' => 'male',
         //     'admin_type' => 'operator',
         //     'apartment_id' => '9',
         //     'address' => "KHUD 2nd section",
@@ -247,13 +285,13 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // DB::table('users')->insert([
-        //     'username' =>"altan",
+        //     'username' =>"badam",
         //     'password' => Hash::make('p@ssw0rd11'),
-        //     'firstname' => 'Altan-Od',
+        //     'firstname' => 'Badamkhorloo',
         //     'lastname' => 'Do-Natla',
         //     'rd' => 'UK97123111',
-        //     'email' => 'altan@gmail.com',
-        //     'phone' => '+9769928831',
+        //     'email' => 'badam@gmail.com',
+        //     'phone' => '+97689288225',
         //     'birthday' => '1999/10/16',
         //     'gender' => 'female',
         //     'admin_type' => 'operator',

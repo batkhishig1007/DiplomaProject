@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Post;
 use App\Category;
+use App\User;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -17,8 +18,10 @@ class PostController extends Controller
      */
     public function index()
     {
+        $category = Category::all();
+        $user = User::all();
         $data = Post::with('category')->orderBy('id', 'desc')->paginate(25);
-        return view('admin.posts.index',compact('data'))->with('i', (request()->input('page', 1) - 1) * 25);
+        return view('admin.posts.index',compact('data', 'category', 'user'))->with('i', (request()->input('page', 1) - 1) * 25);
     }
 
     /**
@@ -28,8 +31,9 @@ class PostController extends Controller
      */
     public function create()
     {
+        $user = User::all();
         $category = Category::all();
-        return view('admin.posts.create', compact('category'));
+        return view('admin.posts.create', compact('category', 'user'));
     }
 
     /**
@@ -74,7 +78,8 @@ class PostController extends Controller
     {
         $posts = Post::where('id', $post->id)->with('category', 'user')->get();
         $post = count($posts) >0 ? $posts[0] : $post;
-        return view('admin.posts.show',compact('post'));
+        $category = Category::all();
+        return view('admin.posts.show',compact('post', 'category'));
     }
 
     /**
@@ -85,8 +90,9 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        
-        return view('admin.posts.edit',compact('post'));
+        $user = User::all();
+        $category = Category::all();
+        return view('admin.posts.edit',compact('post', 'category', 'user'));
     }
 
     /**

@@ -25,12 +25,12 @@ class Application extends Model
         'password', 'remember_token',
     ];
 
-    public function users()
+    public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function posts()
+    public function post()
     {
         return $this->belongsTo(User::class);
     }

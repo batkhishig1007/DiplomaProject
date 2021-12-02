@@ -114,8 +114,11 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Апартмент ID:</strong>
-                <input type="number" name="apartment_id" value="{{ $user->apartment_id }}" class="form-control"
-                    placeholder="apartment_id">
+                <select class="form-select form-control" name="apartment_id" aria-label="Сонгоно уу">
+                    @foreach ($apartment as $key => $value)
+                    <option value="{{$value->id}}" selected>{{$value->apartment_number}}</option>
+                    @endforeach
+                </select>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

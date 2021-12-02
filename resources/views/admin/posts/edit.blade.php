@@ -65,15 +65,21 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Хэрэглэгчийн ID:</strong>
-                <input type="number" name="user_id" value="{{ $post->user_id }}" class="form-control"
-                    placeholder="User_id">
+                <select class="form-select form-control" name="user_id" aria-label="Сонгоно уу">
+                    @foreach ($user as $key => $value)
+                    <option value="{{$value->id}}" selected>{{$value->username}}</option>
+                    @endforeach
+                </select>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Категорийн ID:</strong>
-                <input type="number" name="category_id" value="{{ $post->category_id }}" class="form-control"
-                    placeholder="Category_id">
+                <select class="form-select form-control" name="category_id" aria-label="Сонгоно уу">
+                    @foreach ($category as $key => $value)
+                    <option value="{{$value->id}}" selected>{{$value->category_name}}</option>
+                    @endforeach
+                </select>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

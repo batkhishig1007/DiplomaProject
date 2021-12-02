@@ -15,23 +15,18 @@ class Post extends Model
         'id', 'title', 'short_description', 'description', 'image', 'user_id', 'category_id', 'count_see', 'created_at', 'updated_at', 'deleted_at', 
     ];
 
-    public function users()
+    public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function categories()
+    public function category()
     {
         return $this->belongsTo(Category::class);
     }
 
-    public function applications()
+    public function application()
     {
         return $this->hasMany(User::class);
     }
-
-    // public function setFilenamesAttribute($value)
-    // {
-    //     $this->attributes['image'] = json_encode($value);
-    // }
 }

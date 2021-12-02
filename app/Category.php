@@ -16,7 +16,7 @@ class Category extends Model
         'id', 'category_name', 'created_at', 'updated_at', 'deleted_at', 
     ];
 
-    public function posts()
+    public function post()
     {
         return $this->hasMany(Post::class);
     }

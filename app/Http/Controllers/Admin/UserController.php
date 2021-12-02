@@ -1,9 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
-
 use App\User;
+use App\Apartment;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -16,8 +17,8 @@ class UserController extends Controller
     public function index()
     {
         $data = User::latest()->paginate(5);
-    
-        return view('admin.users.index',compact('data'))
+        $apartment = Apartment::all();
+        return view('admin.users.index',compact('data', 'apartment'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -28,7 +29,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('admin.users.create');
+        $apartment = Apartment::all();
+        return view('admin.users.create',compact('apartment'));
     }
 
     /**
@@ -62,7 +64,8 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return view('Users.show',compact('user'));
+        $apartment = Apartment::all();
+        return view('Users.show',compact('user', 'apartment'));
     }
 
     /**
@@ -73,7 +76,8 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return view('admin.users.edit',compact('user'));
+        $apartment = Apartment::all();
+        return view('admin.users.edit',compact('user', 'apartment'));
     }
 
     /**

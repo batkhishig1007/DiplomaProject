@@ -13,7 +13,7 @@ class Apartment extends Model
      * @var array
      */
     protected $fillable = [
-        'id', 'apartment_name', 'apartment_number', 'created_at', 'updated_at', 'deleted_at', 
+        'id', 'apartment_name', 'apartment_number', 'created_at', 'updated_at', 'deleted_at', 'user_id'
     ];
 
     /**
@@ -21,7 +21,7 @@ class Apartment extends Model
      *
      * @var array
      */
-    public function users()
+    public function user()
     {
         return $this->hasMany(User::class);
     }

@@ -24,7 +24,6 @@
         <th>Гарчиг</th>
         <th>Тайлбар</th>
         <th>Майл</th>
-        <th>Зураг оруулах</th>
         <th>Мэдээний ID</th>
         <th>Хэрэглэгчийн ID</th>
         <th>Санал хүсэлт хаагдсан эсэх</th>
@@ -36,7 +35,6 @@
         <td>{{ $value->title }}</td>
         <td>{{ \Str::limit($value->description, 100) }}</td>
         <td>{{ $value->email }}</td>
-        <td><img src="/uploads/{{ $value->image }}" width="100px"></td>
         <td>{{ $value->post_id }}</td>
         <td>{{ $value->user_id }}</td>
         <td>{{ $value->is_closed }}</td>

@@ -48,20 +48,22 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Зураг оруулах:</strong>
-                <input type="file" name="image" class="form-control" placeholder="Enter image">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
                 <strong>Мэдээний ID:</strong>
-                <input type="number" name="post_id" class="form-control" placeholder="Enter post_id">
+                <select class="form-select form-control" name="post_id" aria-label="Сонгоно уу">
+                    @foreach ($post as $key => $value)
+                    <option value="{{$value->id}}" selected>{{$value->title}}</option>
+                    @endforeach
+                </select>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Хэрэглэгчийн ID:</strong>
-                <input type="number" name="user_id" class="form-control" placeholder="Enter user_id">
+                <select class="form-select form-control" name="username" aria-label="Сонгоно уу">
+                    @foreach ($user as $key => $value)
+                    <option value="{{$value->id}}" selected>{{$value->username}}</option>
+                    @endforeach
+                </select>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

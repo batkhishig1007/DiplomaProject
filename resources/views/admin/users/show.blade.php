@@ -27,12 +27,6 @@
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Нууц үг:</strong>
-            {{ $user->password }}
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
             <strong>Нэр:</strong>
             {{ $user->firstname }}
         </div>
@@ -41,12 +35,6 @@
         <div class="form-group">
             <strong>Овог:</strong>
             {{ $user->lastname }}
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-            <strong>Регистрийн дугаар:</strong>
-            {{ $user->rd }}
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
@@ -63,12 +51,6 @@
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Төрсөн өдөр:</strong>
-            {{ $user->birthday }}
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
             <strong>Хүйс:</strong>
             {{ $user->gender }}
         </div>
@@ -76,7 +58,7 @@
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>Хэрэглэгчийн төрөл:</strong>
-            {{ $user->user_type }}
+            {{ $user->admin_type }}
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">

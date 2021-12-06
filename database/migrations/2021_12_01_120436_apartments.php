@@ -30,6 +30,6 @@ class Apartments extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('apartments');
     }
 }

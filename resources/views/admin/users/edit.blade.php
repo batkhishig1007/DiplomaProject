@@ -108,7 +108,7 @@
                     </option>
                     <option value="undefined" selected={{$user->user_type==="user" ? 'selected' : ''}}>Undefined
                     </option>
-                    <select>
+                </select>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -116,7 +116,11 @@
                 <strong>Апартмент ID:</strong>
                 <select class="form-select form-control" name="apartment_id" aria-label="Сонгоно уу">
                     @foreach ($apartment as $key => $value)
+                    @if($value->id == $user->apartment_id)
                     <option value="{{$value->id}}" selected>{{$value->apartment_number}}</option>
+                    @else
+                    <option value="{{$value->id}}">{{$value->apartment_number}}</option>
+                    @endif
                     @endforeach
                 </select>
             </div>

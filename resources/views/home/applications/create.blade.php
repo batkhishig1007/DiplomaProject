@@ -1,7 +1,7 @@
 @extends('web.customer')
 
 @section('content')
-<form action="{{ route('user_applications.store') }}" method="POST" enctype="multipart/form-data"
+<form action="{{ route('home.applications.store') }}" method="POST" enctype="multipart/form-data"
     style="min-height: 1000px">
     @csrf
     <section class="u-clearfix u-section-1" id="sec-6249">
@@ -31,15 +31,6 @@
                             name="description" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white"
                             required=""></textarea>
                     </div>
-
-                    <!-- <div class="u-align-left u-form-group">
-                        <div class="form-group">
-                            <label for="name-9ec1" class="u-form-control-hidden u-label"></label>
-                            <strong>Зураг оруулах:</strong>
-                            <br><input type="file" name="image" class="form-control" placeholder="Enter image">
-                        </div>
-                    </div> -->
-
                     <br>
                     <div class="u-align-left u-form-group u-form-submit">
                         <a href="/application" class="u-btn u-btn-submit u-button-style">Оруулах<br>

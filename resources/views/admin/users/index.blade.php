@@ -22,13 +22,10 @@
     <tr>
         <th>ID дугаар</th>
         <th>Хэрэглэгчийн нэр</th>
-        <th>Нууц үг</th>
         <th>Нэр</th>
         <th>Овог</th>
-        <th>Регистрийн дугаар</th>
         <th>И-мэйл</th>
         <th>Утасны дугаар</th>
-        <th>Төрсөн өдөр</th>
         <th>Хүйс</th>
         <th>Хэрэглэгчийн төрөл</th>
         <th>Апартмент ID</th>
@@ -41,16 +38,14 @@
     <tr>
         <td>{{ ++$i }}</td>
         <td>{{ $value->username }}</td>
-        <td>{{ $value->password }}</td>
         <td>{{ $value->firstname }}</td>
         <td>{{ $value->lastname }}</td>
-        <td>{{ $value->rd }}</td>
         <td>{{ $value->email }}</td>
         <td>{{ $value->phone }}</td>
-        <td>{{ $value->birthday }}</td>
         <td>{{ $value->gender }}</td>
-        <td>{{ $value->user_type }}</td>
-        <td>{{ $value->apartment_id }}</td>
+        <td>{{ $value->admin_type }}</td>
+        <td>{{ $value->apartment ? $value->apartment->apartment_name . ' /' . $value->apartment->apartment_number : '' }}
+        </td>
         <td>{{ $value->address }}</td>
         <td>{{ $value->is_active }}</td>
         <td>{{ $value->last_logined }}</td>

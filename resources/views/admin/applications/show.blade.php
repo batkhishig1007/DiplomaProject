@@ -33,7 +33,7 @@
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Мэдээний ID:</strong>
+            <strong>Мэдээ:</strong>
             {{ $application->post_id }}
         </div>
     </div>

@@ -27,17 +27,15 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function()
 
 Route::get('login', [CustomAuthController::class, 'index'])->name('login');
 Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom'); 
-
 Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
-Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
+Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signOut');
 
 // customer
-Route::resource('user_applications', 'CustomerApplicationController');
-
+Route::resource('/application', 'CustomerApplicationController');
 Route::get('/heltes', 'HomeController@heltes')->name('heltes');
 Route::get('/taniltsuulga', 'HomeController@taniltsuulga')->name('taniltsuulga');
-
+    
 
 Route::group(['namespace' => 'Customer', 'prefix' => 'home'], function()
 {

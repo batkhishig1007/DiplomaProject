@@ -19,11 +19,13 @@
             u-image
             u-shading
             u-section-1-1
-          " style="background-image:  url({{URL::to('/uploads/'.$slide->image)}}); " data-image-width="945"
+          " style="background-image:  url({{URL::to('uploads/'.$slide->image)}}); " data-image-width="945"
             data-image-height="945">
             <div class="u-clearfix u-sheet u-sheet-1">
                 <h1 class="u-text u-text-black u-text-default u-title u-text-1">
                     {{$slide->title}}
+
+
                 </h1>
                 <a href="{{URL::to('home/news/'.$slide->id)}}"
                     class="u-btn u-button-style u-palette-2-base u-btn-1">Цааш

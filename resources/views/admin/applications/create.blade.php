@@ -48,7 +48,7 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Мэдээний ID:</strong>
+                <strong>Мэдээ:</strong>
                 <select class="form-select form-control" name="post_id" aria-label="Сонгоно уу">
                     @foreach ($post as $key => $value)
                     <option value="{{$value->id}}" selected>{{$value->title}}</option>
@@ -59,7 +59,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Хэрэглэгчийн ID:</strong>
-                <select class="form-select form-control" name="username" aria-label="Сонгоно уу">
+                <select class="form-select form-control" name="user_id" aria-label="Сонгоно уу">
                     @foreach ($user as $key => $value)
                     <option value="{{$value->id}}" selected>{{$value->username}}</option>
                     @endforeach

@@ -31,21 +31,15 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Апартмент нэр:</strong>
-                <select class="form-select form-control" name="apartment_id" aria-label="Сонгоно уу">
-                    @foreach ($apartment as $key => $value)
-                    <option value="{{$value->id}}" selected>{{$value->apartment_name}}</option>
-                    @endforeach
-                </select>
+                <input type="text" name="apartment_name" value="{{ $apartment->apartment_name }}" class="form-control"
+                    placeholder="Name">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Апартмент дугаар:</strong>
-                <select class="form-select form-control" name="apartment_id" aria-label="Сонгоно уу">
-                    @foreach ($apartment as $key => $value)
-                    <option value="{{$value->id}}" selected>{{$value->apartment_number}}</option>
-                    @endforeach
-                </select>
+                <input type="text" name="apartment_number" value="{{ $apartment->apartment_number }}"
+                    class="form-control" placeholder="Number">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

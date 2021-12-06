@@ -16,10 +16,10 @@ class UserController extends Controller
      */
     public function index()
     {
-        $data = User::latest()->paginate(5);
+        $data = User::with('apartment')->latest()->paginate(9);
         $apartment = Apartment::all();
         return view('admin.users.index',compact('data', 'apartment'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1) * 9);
     }
 
     /**
@@ -65,7 +65,7 @@ class UserController extends Controller
     public function show(User $user)
     {
         $apartment = Apartment::all();
-        return view('Users.show',compact('user', 'apartment'));
+        return view('admin.users.show',compact('user', 'apartment'));
     }
 
     /**
@@ -93,7 +93,8 @@ class UserController extends Controller
             // 'title' => 'required',
             // 'description' => 'required',
         ]);
-    
+
+        
         $user->update($request->all());
     
         return redirect()->route('users.index')

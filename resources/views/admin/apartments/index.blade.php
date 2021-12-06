@@ -31,7 +31,8 @@
         <td>{{ ++$i }}</td>
         <td>{{ $value->apartment_name }}</td>
         <td>{{ $value->apartment_number }}</td>
-        <td>{{ $value->user_id }}</td>
+        <td>{{ $value->operator ? $value->operator->firstname : ' - '  }}
+        </td>
         <td>
             <form action="{{ route('apartments.destroy',$value->id) }}" method="POST">
                 <a class="btn btn-info" href="{{ route('apartments.show',$value->id) }}">Харах</a>

@@ -3,7 +3,7 @@
 <section class="u-clearfix u-section-1" id="sec-6249" style="min-height: 1000px">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-form u-form-1">
-            <form action="{{ url('/user_applications') }}" method="POST" enctype="multipart/form-data"
+            <form action="{{ url('/application') }}" method="POST" enctype="multipart/form-data"
                 class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form"
                 style="padding: 10px;">
                 @csrf
@@ -27,15 +27,6 @@
                         name="description" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white"
                         required=""></textarea>
                 </div>
-
-                <!-- <div class="u-align-left u-form-group">
-                    <div class="form-group">
-                        <label for="name-9ec1" class="u-form-control-hidden u-label"></label>
-                        <strong>Зураг оруулах:</strong>
-                        <br><input type="file" name="image" class="form-control" placeholder="Enter image">
-                    </div>
-                </div> -->
-
                 <br>
                 <div class="u-align-left u-form-group u-form-submit">
                     <a href="/application" class="u-btn u-btn-submit u-button-style">Оруулах<br>

@@ -123,8 +123,7 @@
                                 </li>
                                 <li class="u-nav-item">
                                     <a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90"
-                                        data-page-id="703620300" style="padding: 10px 36px;"
-                                        href="/user_applications">Санал,
+                                        data-page-id="703620300" style="padding: 10px 36px;" href="/application">Санал,
                                         гомдол</a>
 
                                 </li>
@@ -183,8 +182,8 @@
                                         <li class="u-nav-item"><a class="u-button-style u-nav-link"
                                                 href="{{route('heltes')}}" style="padding: 10px 36px;">Үйлчилгээ</a>
                                         </li>
-                                        <li class="u-nav-item"><a class="u-button-style u-nav-link"
-                                                href="/user_applications" style="padding: 10px 36px;">Санал,
+                                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/application"
+                                                style="padding: 10px 36px;">Санал,
                                                 гомдол</a>
                                         </li>
                                     </ul>

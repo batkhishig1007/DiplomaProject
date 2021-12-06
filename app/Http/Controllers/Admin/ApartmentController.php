@@ -17,17 +17,18 @@ class ApartmentController extends Controller
      */
     public function index()
     {
+        
         $apartment = Apartment::all();
         $user = User::find(Auth::user()->id);
         $data = null;
 
         if($user && $user->admin_type == 'operator'){
-            $data = Apartment::where('user_id', $user->id)->latest()->paginate(9);
+            $data = Apartment::where('user_id', $user->id)->with('operator')->latest()->paginate(9);
             return view('admin.apartments.index',compact('data', 'user'))->with('i', (request()->input('page', 1) - 1) * 9);
         }
 
         if($user &&  $user->admin_type == 'admin'){
-            $data = Apartment::latest()->paginate(9);
+            $data = Apartment::with('operator')->latest()->paginate(9);
             return view('admin.apartments.index',compact('data', 'user'))->with('i', (request()->input('page', 1) - 1) * 9);
         }
 
@@ -55,10 +56,7 @@ class ApartmentController extends Controller
      */
     public function store(Request $request)
     {
-         $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-        ]);
+
     
         Apartment::create($request->all());
      
@@ -74,7 +72,6 @@ class ApartmentController extends Controller
      */
     public function show(Apartment $apartment)
     {
-        $apartment = Apartment::all();
         $user = User::all();
         $operators = User::where('admin_type', 'operator')->get();
         return view('admin.apartments.show',compact('apartment', 'operators', 'user'));
@@ -88,7 +85,6 @@ class ApartmentController extends Controller
      */
     public function edit(Apartment $apartment)
     {
-        $apartment = Apartment::all();
         $user = User::all();
         $operators = User::where('admin_type', 'operator')->get();
         return view('admin.apartments.edit',compact('apartment', 'operators', 'user'));
@@ -103,11 +99,6 @@ class ApartmentController extends Controller
      */
     public function update(Request $request, Apartment $apartment)
     {
-        $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-        ]);
-    
         $apartment->update($request->all());
     
         return redirect()->route('apartments.index')

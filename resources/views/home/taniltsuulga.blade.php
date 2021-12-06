@@ -15,7 +15,7 @@
             </div>
             <div class="uk-width-expand@m">
                 <ul id="component-tab-left" class="uk-switcher">
-                    <li><img src="https://www.bgd.mn/couch/uploads/image/23-horood/horoo-zurag-2.jpg">
+                    <li><img src="{{URL::to('/images/taniltsuulga.jpg')}}">
                         <p>
                         <p>&nbsp; &nbsp; &nbsp; &nbsp; 1909 онд одоогийн Яармагын гүүрийн доод хэсэгт Орос худалдаачдын
                             хувь нийлсэн пүүсүүд бий болж арьс шир боловсруулах, ноос угаах, саван үйлдвэрлэх зэргээр

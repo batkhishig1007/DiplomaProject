@@ -1,7 +1,6 @@
 <?php
-
-use Illuminate\Support\Facades\Auth;
 namespace App\Http\Controllers\Admin;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\User;
 use App\Apartment;
@@ -16,10 +15,22 @@ class UserController extends Controller
      */
     public function index()
     {
-        $data = User::with('apartment')->latest()->paginate(9);
+        $admin_type = "undefined";
         $apartment = Apartment::all();
-        return view('admin.users.index',compact('data', 'apartment'))
+        if(Auth::user()){
+            $admin_type = User::find(Auth::user()->id)->admin_type;
+        }
+
+        if($admin_type == 'admin'){
+            $data = User::with('apartment')->latest()->paginate(9);
+            return view('admin.users.index',compact('data', 'apartment'))
             ->with('i', (request()->input('page', 1) - 1) * 9);
+        }else{
+            $apartment_ids = Apartment::where('user_id', Auth::user()->id)->pluck('id');
+            $data = User::with('apartment')->whereIn('apartment_id', $apartment_ids)->latest()->paginate(9);
+            return view('admin.users.index',compact('data', 'apartment'))
+            ->with('i', (request()->input('page', 1) - 1) * 9);
+        }    
     }
 
     /**

@@ -264,7 +264,7 @@
                             <p class="u-text u-text-3">
                                 Имайл: hud_2khoroo@khanuul.mn
                             </p>
-                            <a href="https://nicepage.com/static-site-generator" class="
+                            <a class="
                     u-active-none
                     u-btn
                     u-btn-rectangle
@@ -272,8 +272,6 @@
                     u-hover-none
                     u-none
                     u-radius-0
-                    u-text-body-color
-                    u-btn-3
                   "><span class="u-icon u-icon-3"><svg class="u-svg-content" viewBox="0 0 405.333 405.333" x="0px"
                                         y="0px" style="width: 1em; height: 1em">
                                         <path

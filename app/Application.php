@@ -32,6 +32,6 @@ class Application extends Model
 
     public function post()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 }

@@ -83,10 +83,10 @@
                             <span class="u-meta-date u-meta-icon">Wed Dec 8 2021</span>
                             <span class="u-meta-comments u-meta-icon">Comments (0)</span>
                         </div>
-                        <h4 class="u-blog-control u-text u-text-2">
+                        <h5 class="u-blog-control u-text u-text-2">
                             <a class="u-post-header-link"
                                 href="{{URL::to('home/news/'.$value->id)}}">{{$value->title}}</a>
-                        </h4>
+                        </h5>
                     </div>
                 </div>
                 @endforeach
@@ -124,7 +124,7 @@
                         <h3 class="u-align-center u-text u-text-default u-text-3">
                             Хэсгийн цагдаа
                         </h3>
-                        <p class="u-text u-text-2">
+                        <p class="u-text u-text-4">
                             Хорооны нутаг дэвсгэрт нийгмийн хэв журам сахиулах, гэмт
                             хэргээс урьдчилан сэргийлэх, тэмцэх. &nbsp;Хорооны
                             нутаг дэвсгэрт үйлдэгдсэн гэмт хэрэг, зөрчлийн судалгаанд

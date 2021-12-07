@@ -89,12 +89,7 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $request->validate([
-            // 'title' => 'required',
-            // 'description' => 'required',
-        ]);
 
-        
         $user->update($request->all());
     
         return redirect()->route('users.index')

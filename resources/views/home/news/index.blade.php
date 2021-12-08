@@ -7,7 +7,6 @@
             <div class="u-layout singleNews">
                 <div class="u-layout-row">
                     <h2 class="u-text u-text-1 newstitle">{{$news->title}}</h2>
-
                     <div class="newsimage">
                         <img src="{{URL::to('/uploads/'.$news->image)}}" data-image-width="1080"
                             data-image-height="1080">

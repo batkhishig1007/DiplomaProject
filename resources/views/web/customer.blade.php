@@ -248,6 +248,7 @@
                       u-none
                       u-text-palette-1-base
                       u-btn-2
+                      centerContent
                     " href="https://www.facebook.com/profile.php?id=100064750566804"><span class="u-icon u-icon-2"><svg
                                             class="u-svg-content" viewBox="0 0 32 32" style="width: 1em; height: 1em">
                                             <g>

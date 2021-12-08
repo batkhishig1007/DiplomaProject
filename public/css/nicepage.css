@@ -13398,8 +13398,6 @@ section.u-image,
     flex-wrap: wrap;
     min-height: 100%;
     max-width: 100%;
-    align-items: center !important;
-    text-align: center !important;
 }
 .u-layout-cell {
     position: relative;

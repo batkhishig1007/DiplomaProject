@@ -27,7 +27,8 @@ class CustomerNewsCategoryController  extends Controller
         $admin_type = null;
         $menu_categories = Category::whereNull('deleted_at')->get();
         $category_id = $id;
-        $data = Post::with('user')->where('category_id', $id)->paginate(9);
+        $data = Post::with('user')->where('category_id', $id)->orderBy('id', 'desc')->paginate(9);
+
 
         if(Auth::user()){
             $admin_type = User::find(Auth::user()->id)->admin_type;
